@@ -1,0 +1,86 @@
+<div class="navbar-fixed white black-text">
+    <div class="row" id="brand-logo">
+        <a href="#" class="brand-logo">Screen Printer</a>
+    </div>
+    <div class="valign-wrapper">
+        <ul id="nav-tabs" class="tabs center">
+            <li class="tab col s6 active"><a href="/" class="black-text">About</a></li>
+            <li class="tab col s6 active"><a href="/login" class="black-text">Login</a></li>
+            <li class="tab col s6 active"><a href="/signup" class="black-text">Signup</a></li>
+            <li class="tab col s6 active"><a href="/index" class="black-text">Home</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class ="container grey darken-2" id ="loginForm">
+    <div class="row">
+        <div class="col s12  card">
+            <form id ="form">
+                <h4 class="center-align grey-text darken-2-text">Login</h4>
+
+                <div class ="row col s8">
+                    <div class="form-group col s8">
+                        <i class="material-icons prefix">account_circle</i>
+                        <label>User Name: </label>
+                        <input class="form-control" id="username-input" class = "validate" name ="username" type="text" required>
+                    </div>
+                </div>
+
+                <div class ="row">
+                    <div class="form-group col s8 ">
+                        <i class="material-icons prefix">lock_outline</i>
+                        <label>Password: </label>
+                        <input class="form-control " id="password-input" class = "validate" name ="password" type="password" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col s8">
+                        <label>Remember Me</label>
+                        <input type="checkbox" class="form-control" name="remember" value="yes">
+                    </div>
+                </div>
+
+                <div class = "test">
+                    <a class="links light-blue-text accent-4-text" id="forgotP" href="/views/forgotPW.handlebars">Forgot Password</a>
+
+                    <br>
+
+                    <a class="links light-blue-text accent-4-text" id="registerAccount" href="/signup">Don't have an account? Register here</a>
+                </div>
+
+                <div class="col s12 center-align center section">
+                    <button class="btn waves-effect waves-light light-blue accent-4" id="login" type="submit" name="action">Login
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--<form action="/login" method="post">-->
+    <!--<div class="form-group">-->
+        <!--<label>Username</label>-->
+        <!--<input type="text" class="form-control" name="username">-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<label>Password</label>-->
+        <!--<input type="password" class="form-control" name="password">-->
+    <!--</div>-->
+    <!--<div class="form-group">-->
+        <!--<label>Remember Me</label>-->
+        <!--<input type="checkbox" class="form-control" name="remember" value="yes">-->
+    <!--</div>-->
+
+    <!--<button type="submit" class="btn btn-warning btn-lg">Login</button>-->
+<!--</form>-->
+
+
+
+<div>
+    {{#if error}}
+        <div class="alert alert-danger">{{error}}</div>
+    {{/if}}
+</div>
+

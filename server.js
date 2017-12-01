@@ -8,7 +8,7 @@ var passport = require('passport');
 var flash = require('connect-flash');
 var exphbs = require("express-handlebars");
 var morgan = require('morgan');
-
+var path = require('path');
 // configuration ===============================================================
 // connect to our database
 
@@ -23,7 +23,10 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
+
 //setting up templating system
+app.use(express.static(path.join(__dirname, '/public')));
+
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set('view engine', 'handlebars'); // set up hbs for templating
 

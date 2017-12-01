@@ -5,5 +5,6 @@ module.exports = {
         'password': ''
     },
     'database': 'screen_printer',
-    'users_table': 'users'
+    'users_table': 'users',
+    'orders_table': 'orders'
 };

@@ -31,15 +31,6 @@ body{
     color:black;
 }
 
-div.navbar-fixed{
-    height: 150px;
-    text-align: center;
-    color: #0d47a1;
-}
-
-#nav-tabs{
-    text-align: center;
-}
 
 li.tab.col.s6.active {
     background-color:white;

@@ -84,6 +84,16 @@ module.exports = function(app, passport) {
         // });
     });
 
+    app.get('/placeorder', function(req, res){
+
+        res.render('placeorder.handlebars', {
+            user : req.user // get the user out of session and pass to template
+        });
+        // res.status(200).json({
+        //     status: 'Login successful!'
+        // });
+    });
+
 };
 
 // route middleware to make sure

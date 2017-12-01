@@ -152,4 +152,48 @@ ul.right li {
 ul.right li a{
 
 }
+/* NEW STUFF*/
+nav ul li {
+    display:inline-block;
+    margin-top:60px;
+    float:none;
+}
+.row .col.s8{
+    left:inherit;
+    right:auto;
+    float:left;
+    margin-left: 70px;
+}
+
+.colorBox {
+    align-items: center;
+    align-content: center;
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+
+
+.colorBox:hover{
+
+    width: 25px;
+    height: 25px;
+}
+.colorImage, .placeholderColorImage{
+    width: 270px;
+    height: 320px;
+    margin: 45px;
+}
+p{
+    margin-top:75px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+}
+nav{
+    height:175px;
+}
 

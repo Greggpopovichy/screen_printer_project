@@ -3,15 +3,33 @@ module.exports = function(app, passport) {
     // This would eventually be a route to the home page (with link to the login page) ========
 
     app.get('/', function(req, res) {
-        res.render('index.handlebars'); // load the home page
+        res.render('index'); // load the home page
     });
+
+    app.get('/about', function(req,res){
+        res.render('about');
+    });
+
+    app.get('/index', function(req, res){
+        res.render('index');
+    });
+
+    app.get('/forgotPassword', function(req,res){
+        res.render('forgotPW');
+    });
+
+    app.get('/placeOrder', function(req,res){
+        res.render('placeorder');
+    });
+
+
 
     // LOGIN ===============================
     // show the login form
     app.get('/login', function(req, res) {
         //logic if user redirect to index makes sure they dont see login again
         // render the page and pass in any flash data if it exists
-        res.render('login.handlebars', { user : req.user });
+        res.render('login', { user : req.user });
     });
 
     // process the login form
@@ -35,7 +53,7 @@ module.exports = function(app, passport) {
     // show the signup form
     app.get('/signup', function(req, res) {
         // render the page and pass in any flash data if it exists
-        res.render('signup.handlebars', { layout: 'main.handlebars', action: 'Sign up', message: req.flash('signupMessage')});
+        res.render('signup', { layout: 'main.handlebars', action: 'Sign up', message: req.flash('signupMessage')});
     });
 
     // process the signup form
@@ -49,22 +67,11 @@ module.exports = function(app, passport) {
     // we will want this protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
     app.get('/profile', isAuthenticated, function(req, res) {
-        res.render('profile.handlebars', {
+        res.render('profile', {
             user : req.user // get the user out of session and pass to template
         });
     });
 
-    app.get('/about', function(req,res){
-        res.render('about');
-    });
-
-    app.get('/index', function(req, res){
-        res.render('index');
-    });
-
-    app.get('/forgotPassword', function(req,res){
-        res.render('forgotPW');
-    });
 
     // =====================================
     // LOGOUT ==============================
@@ -76,7 +83,7 @@ module.exports = function(app, passport) {
 
     app.get('/checkauth', function(req, res){
 
-        res.render('checkauth.handlebars', {
+        res.render('checkauth', {
             user : req.user // get the user out of session and pass to template
         });
         // res.status(200).json({

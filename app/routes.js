@@ -16,7 +16,7 @@ module.exports = function(app, passport) {
 
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
-            successRedirect : '/profile', // redirect to the secure profile section
+            successRedirect : '/checkauth', // redirect to the secure profile section
             failureRedirect : '/index', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }),
@@ -48,7 +48,7 @@ module.exports = function(app, passport) {
     // PROFILE SECTION =========================
     // we will want this protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
-    app.get('/profile', isLoggedIn, function(req, res) {
+    app.get('/profile', isAuthenticated, function(req, res) {
         res.render('profile.handlebars', {
             user : req.user // get the user out of session and pass to template
         });
@@ -74,16 +74,31 @@ module.exports = function(app, passport) {
         res.redirect('/');
     });
 
+    app.get('/checkauth', isAuthenticated, function(req, res){
+
+        res.status(200).json({
+            status: 'Login successful!'
+        });
+    });
 
 };
 
 // route middleware to make sure
-function isLoggedIn(req, res, next) {
-
-    // if user is authenticated in the session, carry on
-    if (req.isAuthenticated())
+// function isLoggedIn(req, res, next) {
+//
+//     // if user is authenticated in the session, carry on
+//     if (req.isAuthenticated())
+//         return next();
+//
+//     // if they aren't redirect them to the home page
+//     res.redirect('/');
+// }
+function isAuthenticated(req,res,next){
+    if(req.user)
         return next();
+    else
+        return res.status(401).json({
+            error: 'User not authenticated'
+        })
 
-    // if they aren't redirect them to the home page
-    res.redirect('/');
 }

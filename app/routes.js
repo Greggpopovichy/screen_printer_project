@@ -3,25 +3,16 @@ module.exports = function(app, passport) {
     // This would eventually be a route to the home page (with link to the login page) ========
 
     app.get('/', function(req, res) {
-        res.render('index'); // load the home page
+        res.render('about'); // load the home page
     });
 
     app.get('/about', function(req,res){
         res.render('about');
     });
 
-    app.get('/index', function(req, res){
-        res.render('index');
-    });
-
     app.get('/forgotPassword', function(req,res){
         res.render('forgotPW');
     });
-
-    app.get('/placeOrder', function(req,res){
-        res.render('placeorder');
-    });
-
 
 
     // LOGIN ===============================
@@ -35,7 +26,7 @@ module.exports = function(app, passport) {
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
             successRedirect : '/checkauth', // redirect to the secure profile section
-            failureRedirect : '/index', // redirect back to the signup page if there is an error
+            failureRedirect : '/about', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }),
         function(req, res) {
@@ -46,7 +37,7 @@ module.exports = function(app, passport) {
             } else {
                 req.session.cookie.expires = false;
             }
-            res.redirect('/index');
+            res.redirect('/about');
         });
 
     // SIGNUP

@@ -1,6 +1,6 @@
 <div class="navbar-fixed white black-text">
     <div class="row" id="brand-logo">
-        <a href="#" class="brand-logo">Screen Printer</a>
+        <a href="/index" class="brand-logo">Screen Printer</a>
     </div>
     <div class="valign-wrapper">
         <ul id="nav-tabs" class="tabs center">
@@ -8,15 +8,17 @@
             <li class="tab col s6 active"><a href="/login" class="black-text">Login</a></li>
             <li class="tab col s6 active"><a href="/signup" class="black-text">Signup</a></li>
             <li class="tab col s6 active"><a href="/index" class="black-text">Home</a></li>
+
         </ul>
     </div>
 </div>
 
+<h1>{{user}}</h1>
 
 <div class ="container grey darken-2" id ="loginForm">
     <div class="row">
         <div class="col s12  card">
-            <form id ="form">
+            <form id ="form" method="post">
                 <h4 class="center-align grey-text darken-2-text">Login</h4>
 
                 <div class ="row col s8">

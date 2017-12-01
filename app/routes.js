@@ -1,24 +1,23 @@
 module.exports = function(app, passport) {
 
-
     // This would eventually be a route to the home page (with link to the login page) ========
 
     app.get('/', function(req, res) {
-        res.render('index.handlebars'); // load the login.handlebars page
+        res.render('index.handlebars'); // load the home page
     });
 
     // LOGIN ===============================
     // show the login form
     app.get('/login', function(req, res) {
-
+        //logic if user redirect to index makes sure they dont see login again
         // render the page and pass in any flash data if it exists
-        res.render('login.handlebars', { message: req.flash('loginMessage') });
+        res.render('login.handlebars', { user : req.user });
     });
 
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
             successRedirect : '/profile', // redirect to the secure profile section
-            failureRedirect : '/login', // redirect back to the signup page if there is an error
+            failureRedirect : '/index', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }),
         function(req, res) {
@@ -29,14 +28,14 @@ module.exports = function(app, passport) {
             } else {
                 req.session.cookie.expires = false;
             }
-            res.redirect('/');
+            res.redirect('/index');
         });
 
     // SIGNUP
     // show the signup form
     app.get('/signup', function(req, res) {
         // render the page and pass in any flash data if it exists
-        res.render('signup.handlebars', { layout: 'main.handlebars', action: 'Sign in', message: req.flash('signupMessage') });
+        res.render('signup.handlebars', { layout: 'main.handlebars', action: 'Sign up', message: req.flash('signupMessage')});
     });
 
     // process the signup form
@@ -45,7 +44,6 @@ module.exports = function(app, passport) {
         failureRedirect : '/signup', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
-
 
     // PROFILE SECTION =========================
     // we will want this protected so you have to be logged in to visit

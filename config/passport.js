@@ -87,6 +87,7 @@ module.exports = function(passport) {
     // we are using named strategies since we have one for login and one for signup
     // by default, if there was no name, it would just be called 'local'
 
+    //
     passport.use(
         'local-login',
         new LocalStrategy({
@@ -95,7 +96,7 @@ module.exports = function(passport) {
                 passwordField : 'password',
                 passReqToCallback : true // allows us to pass back the entire request to the callback
             },
-            function(req, username, password, done) { // callback with email and password from our form
+            function(req, username, password, done) { // callback with email and password from form
                 connection.query("SELECT * FROM users WHERE username = ?",[username], function(err, rows){
                     if (err)
                         return done(err);
@@ -108,7 +109,7 @@ module.exports = function(passport) {
                         return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.')); // create the loginMessage and save it to session as flashdata
 
                     // all is well, return successful user
-                    return done(null, rows[0]);
+                    return done(null, rows[0], req.flash('loginMessage', 'Success'));
                 });
             })
     );

@@ -1,19 +1,20 @@
-<div class="navbar-fixed white black-text">
-    <div class="row" id="brand-logo">
-        <a href="/index" class="brand-logo">Screen Printer</a><br>
-    </div>
-    <div class="valign-wrapper">
-         <ul id="nav-tabs" class="tabs center">
-             <li class="tab col s6 active"><a href="/login" class="black-text">Login</a></li>
-             <li class="tab col s6 active"><a href="/signup" class="black-text">Sign up</a></li>
-             <li class="tab col s6 active"><a href="/index" class="black-text">Home</a></li>
-             <li class="tab col s6 active"><a href="/about" class="black-text">About</a></li>
-             {{#if user.username}}
-                 <li class="tab col s3 active"><a href="/profile" class="black-text">Profile</a></li>
+<nav class = "grey darken-2 white-text">
+    <div class="nav-wrapper">
+        <div class ="row">
+            <a href="#" class="brand-logo center">NEED A NAMMMEEEE</a>
+        </div>
+        <div class="row">
+            <ul id="nav-mobile" class="center-align hide-on-med-and-down">
+                <li><a href="/about">About</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Register</a></li>
+{{#if user.username}}
+                 <li><a href="/profile" class="black-text">Profile</a></li>
              {{/if}}
-         </ul>
+            </ul>
         </div>
     </div>
+</nav>
 
 
 <div class="container">

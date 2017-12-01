@@ -74,11 +74,14 @@ module.exports = function(app, passport) {
         res.redirect('/');
     });
 
-    app.get('/checkauth', isAuthenticated, function(req, res){
+    app.get('/checkauth', function(req, res){
 
-        res.status(200).json({
-            status: 'Login successful!'
+        res.render('checkauth.handlebars', {
+            user : req.user // get the user out of session and pass to template
         });
+        // res.status(200).json({
+        //     status: 'Login successful!'
+        // });
     });
 
 };

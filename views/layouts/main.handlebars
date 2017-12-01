@@ -24,6 +24,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 
+<script>
+    var $grid = $('.grid').imagesLoaded( function() {
+        $grid.masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            columnWidth: '.grid-sizer'
+        });
+    });
+</script>
+
 </body>
 
 </html>

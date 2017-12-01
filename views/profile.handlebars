@@ -20,10 +20,9 @@
     <div class="row col s12">
             <div class="card blue-grey darken-1" id="profileCard">
                 <div class="card-content white-text">
-                    <span class="card-title">User Information</span>
+                    <span class="card-title">Welcome {{ user.user_first_name }}, checkout your information below!</span>
                     <p>
                         <strong>Username</strong>: {{user.username }}<br>
-                        <strong>Password</strong>: {{ user.password }}<br>
                         <strong>First Name</strong>: {{ user.user_first_name }}<br>
                         <strong>Last Name</strong>: {{ user.user_last_name }}<br>
                         <strong>Phone Number</strong>: {{ user.user_number }}<br>
@@ -32,7 +31,7 @@
                 </div>
             </div>
         <div class="row col s12">
-                <p><a href="/login">Login</a></p>
+                <p><a href="/logout">Logout</a></p>
                 <p>Go <a href="/">Home</a></p>
         </div>
     </div>

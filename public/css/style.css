@@ -42,11 +42,11 @@ li.tab.col.s6.active {
 } /*Color of underline*/
 
 a.brand-logo{
-    font-size: 48px;
-    padding-top: 10%;
+    font-size: 62px;
     color: #0d47a1;
     font-family: 'Roboto Slab', serif;
     text-align: center;
+    padding-top: 20px;
 }
 
 div.col.s12.card{
@@ -144,6 +144,10 @@ ul.right li a{
 
 }
 /* NEW STUFF*/
+
+ul#nav-mobile{
+    padding-top:30px;
+}
 nav ul li {
     display:inline-block;
     margin-top:60px;
@@ -178,15 +182,15 @@ nav ul li {
     height: 320px;
     margin: 45px;
 }
+
 p{
-    margin-top:75px;
-    margin-left: 20%;
-    margin-right: 20%;
     text-align: center;
 }
+
 nav{
     height:175px;
 }
+
 /*.pickQuantity {*/
     /*display: inline;*/
     /*margin-left: 25%;*/
@@ -194,3 +198,19 @@ nav{
 #quantity{
     width:25%;
 }
+
+
+.iris {
+    background-image: url("http://1.bp.blogspot.com/-SYNmi5QKsFs/UrR9KPsUQJI/AAAAAAAAD6M/iW0aYcSjo0E/s1600/IMG_6993.JPG");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+
+.login-image{
+    background-image: url("https://i.pinimg.com/originals/36/cf/76/36cf76bef9b5b80937bc26ec86e30268.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+}
+

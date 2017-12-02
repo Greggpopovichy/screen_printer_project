@@ -7,11 +7,33 @@ module.exports = function(app, passport) {
     });
 
     app.get('/about', function(req,res){
-        res.render('about');
+        res.render('about', {
+            user : req.user // get the user out of session and pass to template
+        });
     });
 
     app.get('/forgotPassword', function(req,res){
         res.render('forgotPW');
+    });
+
+    app.get('/checkauth', function(req, res){
+
+        res.render('checkauth', {
+            user : req.user // get the user out of session and pass to template
+        });
+        // res.status(200).json({
+        //     status: 'Login successful!'
+        // });
+    });
+
+    app.get('/placeorder', function(req, res){
+
+        res.render('placeorder.handlebars', {
+            user : req.user // get the user out of session and pass to template
+        });
+        // res.status(200).json({
+        //     status: 'Login successful!'
+        // });
     });
 
 
@@ -72,25 +94,7 @@ module.exports = function(app, passport) {
         res.redirect('/');
     });
 
-    app.get('/checkauth', function(req, res){
 
-        res.render('checkauth', {
-            user : req.user // get the user out of session and pass to template
-        });
-        // res.status(200).json({
-        //     status: 'Login successful!'
-        // });
-    });
-
-    app.get('/placeorder', function(req, res){
-
-        res.render('placeorder.handlebars', {
-            user : req.user // get the user out of session and pass to template
-        });
-        // res.status(200).json({
-        //     status: 'Login successful!'
-        // });
-    });
 
 };
 

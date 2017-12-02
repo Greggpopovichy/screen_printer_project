@@ -153,12 +153,12 @@ nav ul li {
     margin-top:60px;
     float:none;
 }
-.row .col.s8{
-    left:inherit;
-    right:auto;
-    float:left;
-    margin-left: 70px;
-}
+/*.row .col.s8{*/
+    /*left:inherit;*/
+    /*right:auto;*/
+    /*float:left;*/
+    /*margin-left: 70px;*/
+/*}*/
 
 .colorBox {
     align-items: center;
@@ -191,6 +191,15 @@ nav{
     height:175px;
 }
 
+/*.pickQuantity {*/
+    /*display: inline;*/
+    /*margin-left: 25%;*/
+/*}*/
+#quantity{
+    width:25%;
+}
+
+
 .iris {
     background-image: url("http://1.bp.blogspot.com/-SYNmi5QKsFs/UrR9KPsUQJI/AAAAAAAAD6M/iW0aYcSjo0E/s1600/IMG_6993.JPG");
     background-repeat: no-repeat;
@@ -204,3 +213,4 @@ nav{
     height: 100vh;
     background-size: cover;
 }
+

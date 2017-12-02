@@ -149,12 +149,12 @@ nav ul li {
     margin-top:60px;
     float:none;
 }
-.row .col.s8{
-    left:inherit;
-    right:auto;
-    float:left;
-    margin-left: 70px;
-}
+/*.row .col.s8{*/
+    /*left:inherit;*/
+    /*right:auto;*/
+    /*float:left;*/
+    /*margin-left: 70px;*/
+/*}*/
 
 .colorBox {
     align-items: center;
@@ -187,4 +187,10 @@ p{
 nav{
     height:175px;
 }
-
+/*.pickQuantity {*/
+    /*display: inline;*/
+    /*margin-left: 25%;*/
+/*}*/
+#quantity{
+    width:25%;
+}

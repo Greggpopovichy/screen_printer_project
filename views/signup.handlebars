@@ -1,69 +1,58 @@
-<div class ="wrapper">
-
-
-
-    <nav class = "grey darken-2 white-text">
-        <divk class="nav-wrapper">
-            <div class ="row">
-                <a href="#" class="brand-logo center">NEED A NAMMMEEEE</a>
-            </div>
-            <div class="row">
-                <ul id="nav-mobile" class="center-align hide-on-med-and-down">
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/signup">Register</a></li>
-                </ul>
-            </div>
-        </divk>
-    </nav>
-
-
-    <div class="container">
-    <div class="row" id="signupCard">
-        <div class="col s12 card">
-            <h4 class="center-align grey-text darken-2-text">Sign Up</h4>
-
-            <form action="/signup" method="post">
-                <div class="form-group col s8" id="firstName">
-                    <label for="fName-input">First Name </label>
-                    <input class="form-control" id="fName-input" name="user_first_name" class = "validate" type="text" required>
-                </div>
-
-                <div class="form-group col s8" id="lastName">
-                    <label>Last Name </label>
-                    <input class="form-control" id="lName-input" name="user_last_name" class = "validate" type="text" required>
-                </div>
-
-                <div class="form-group col s8" id="number">
-                    <label>Number </label>
-                    <input class="form-control" id="number-input" class = "validate" name="user_number" type="number" required>
-                </div>
-
-                <div class="form-group col s8" id="email">
-                    <label>Email </label>
-                    <input class="form-control" id="email-input" class = "validate" name="user_email" type="email" required>
-                </div>
-
-                <div class="form-group col s8">
-                    <label>Username</label>
-                    <input type="text" class="form-control" name="username" required>
-                </div>
-                <div class="form-group col s8">
-                    <label>Password</label>
-                    <input type="password" class="form-control" name="password" required>
-                </div>
-                <button type="submit" class="btn btn-warning btn-lg" id="signupSubmit">Signup</button>
-            </form>
-
-            {{#if message}}
-            <div class="alert alert-danger">{{message}}</div>
-            {{/if}}
-            </div>
-        </div>
-
-    <div class="redirect">
-        <p>Already have an account? <a href="/login">Login</a></p>
-        <p>Or go <a href="/">Home</a></p>
+<nav class = "grey darken-2 white-text">
+    <div class ="nav-wrapper">
+        <a href="/about" class="brand-logo center">Chuck's Tees</a>
+        <ul id="nav-mobile" class="center-align hide-on-med-and-down">
+            <li><a href="/about">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Sign Up</a></li>
+        </ul>
     </div>
-</div>
+</nav>
+
+<div class="container">
+<div class="row" id="signupCard">
+    <div class="col s12 card">
+        <h4 class="center-align grey-text darken-2-text">Sign Up</h4>
+
+        <form action="/signup" method="post">
+            <div class="form-group col s8" id="firstName">
+                <label for="fName-input">First Name </label>
+                <input class="form-control" id="fName-input" name="user_first_name" class = "validate" type="text" required>
+            </div>
+
+            <div class="form-group col s8" id="lastName">
+                <label>Last Name </label>
+                <input class="form-control" id="lName-input" name="user_last_name" class = "validate" type="text" required>
+            </div>
+
+            <div class="form-group col s8" id="number">
+                <label>Number </label>
+                <input class="form-control" id="number-input" class = "validate" name="user_number" type="number" required>
+            </div>
+
+            <div class="form-group col s8" id="email">
+                <label>Email </label>
+                <input class="form-control" id="email-input" class = "validate" name="user_email" type="email" required>
+            </div>
+
+            <div class="form-group col s8">
+                <label>Username</label>
+                <input type="text" class="form-control" name="username" required>
+            </div>
+            <div class="form-group col s8">
+                <label>Password</label>
+                <input type="password" class="form-control" name="password" required>
+            </div>
+            <button type="submit" class="btn btn-warning btn-lg" id="signupSubmit">Signup</button>
+        </form>
+
+        {{#if message}}
+        <div class="alert alert-danger">{{message}}</div>
+        {{/if}}
+        </div>
+    </div>
+    <footer class="row col s12">
+        <p>Already have an account? <a href="/login">Login</a></p>
+        <p><a href="/logout">Logout</a></p>
+    </footer>
 </div>

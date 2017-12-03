@@ -239,41 +239,57 @@ var color;
 
         $('#placeorder').click(function() {
 
-        console.log("size "+ $(".size").val())
-        console.log("color "+ color)
-        console.log("quantity "+ $("#quantity").val())
-        console.log("shirt  "+ $(".shirt_type").val())
-        console.log("notes "+ $("#notes").val())
+            console.log("size " + $(".size").val())
+            console.log("color " + color)
+            console.log("quantity " + $("#quantity").val())
+            console.log("shirt  " + $(".shirt_type").val())
+            console.log("notes " + $("#notes").val())
 
-        var size = $(".size").val();
-        var quantity = $("#quantity").val()
-        var shirtType = $(".shirt_type").val()
-        var notes = $("#notes").val()
-        var uname = "{{user.username}}"
-        var newUserOrder = {
-            username: uname,
-            size: size,
-            price:price,
-            shirt_type: shirtType,
-            color: color,
-            quantity: quantity,
-            notes:notes
-        };
+            var size = $(".size").val();
+            var quantity = $("#quantity").val()
+            var shirtType = $(".shirt_type").val()
+            var notes = $("#notes").val()
 
-        console.log(newUserOrder);
+            var newUserOrder = {
+                var uname = "{{user.username}}";
 
+                var newUserOrder = {
+                    username: uname,
+                    size: size,
+                    price: price,
+                    shirt_type: shirtType,
+                    color: color,
+                    quantity: quantity,
+                    notes: notes
+                };
+
+            console.log(newUserOrder);
+
+            // Send the POST request.
+//        $.ajax("/newOrder", {
+//            type: "POST",
+//            data: newUserOrder
+//        }).then(function () {
+//                    //this should log to browser console to let us know that the database has been updated
+//                    console.log("created new order");
+//                    // Reload the page to get the updated list
+//                    location.reload();
+//                }
+//        );
 //         Send the POST request.
-        $.ajax("/newOrder", {
-            type: "POST",
-            data: newUserOrder
-        }).then(function () {
-                    //this should log to browser console to let us know that the database has been updated
-                    console.log("created new order");
-                    // Reload the page to get the updated list
-                    location.reload();
-                }
-        );
-    })
+            $.ajax("/newOrder", {
+                type: "POST",
+                data: newUserOrder
+            }).then(function () {
+                        //this should log to browser console to let us know that the database has been updated
+                        console.log("created new order");
+                        // Reload the page to get the updated list
+                        location.reload();
+                    }
+            )
+        }
+
+
 
 </script>
 

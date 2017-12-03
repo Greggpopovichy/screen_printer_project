@@ -81,23 +81,40 @@ module.exports = function(app, passport) {
     // PROFILE SECTION =========================
     // we will want this protected so you have to be logged in to visit
     // we will use route middleware to verify this (the isLoggedIn function)
+
+
+    //Trying to get so that all orders for logged in user will appear on the profiles page. Havent tried to bring
+    //it back yet with handlebars, im just trying to console log the data for now.
     app.get('/profile', isAuthenticated, function(req, res) {
+        console.log(req);
+        connection.query("SELECT * FROM orders WHERE username = ?",[req.user.username], function(err, data) {
+            console.log(err)
+            if (err) {
+                return res.status(500).end();
+            }
+            console.log("Test" + data);
+            res.render("profile", { orders: data });
+        });
         res.render('profile', {
             user : req.user // get the user out of session and pass to template
         });
+
     });
+
+
     app.get('/placeorder', isAuthenticated, function(req, res) {
         res.render('placeorder', {
             user : req.user // get the user out of session and pass to template
         });
     });
 
+    //Trying to get this data to post to the table when you click "place order"
     app.post("/newOrder", function(req,res){
         var newUserProps = [req.body.username,req.body.size, req.body.price, req.body.shirt_type, req.body.color, req.body.quantity, req.body.notes];
-       console.log(newUserProps)
+        console.log(newUserProps)
         user.create(["username", "size", "price", "shirt_type", "color","quantity", "notes"], newUserProps,
             function(result) {
-                res.json({id: result.insertId});
+                res.json(result);
                 console.log("worked?")
             });
         console.log(user);

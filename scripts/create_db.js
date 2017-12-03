@@ -3,7 +3,7 @@ var dbconfig = require('../config/database.js');
 
 var connection = mysql.createConnection(dbconfig.connection);
 
-connection.query('CREATE DATABASE ' + dbconfig.database);
+connection.query('USE DATABASE ' + dbconfig.database);
 
 connection.query('\
 CREATE TABLE IF NOT EXISTS`' + dbconfig.database + '`.`' + dbconfig.users_table + '` ( \

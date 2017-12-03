@@ -2,10 +2,6 @@ body{
     font-family: 'Roboto Slab', serif;
 }
 
-.grey.lighten-4{
-    font-family: 'Noto Sans', sans-serif;
-}
-
 .test {
     text-align:center;
     margin-bottom:10px;
@@ -31,7 +27,6 @@ body{
     color:black;
 }
 
-
 li.tab.col.s6.active {
     background-color:white;
     color:#0d47a1;
@@ -44,7 +39,6 @@ li.tab.col.s6.active {
 a.brand-logo{
     font-size: 62px;
     color: #0d47a1;
-    font-family: 'Roboto Slab', serif;
     text-align: center;
     padding-top: 20px;
 }
@@ -85,44 +79,11 @@ div.col.s12.card{
 /* force scrollbar */
 html { overflow-y: scroll; }
 
-body { font-family: sans-serif; }
-
-/* ---- grid ---- */
-
-.grid {
-    background: #01579b;
-}
-
-/* clear fix */
-.grid:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-/* ---- .grid-item ---- */
-
-.grid-sizer,
-.grid-item {
-    width: 33.333%;
-}
-
-.grid-item {
-    float: left;
-}
-
-.grid-item img {
-    display: block;
-    width: 300px;
-    height:300px;
-    padding: 10px;
-}
 
 /*new nav*/
 
 
 nav{
-    background-color: #b0bec5;
     height: 72px;
 }
 
@@ -214,3 +175,6 @@ nav{
     background-size: cover;
 }
 
+#loginCard{
+    width: 75%;
+}

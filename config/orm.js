@@ -1,4 +1,4 @@
-var connection = require("config/database.js");
+var connection = require("./database.js");
 
 var orm = {
 

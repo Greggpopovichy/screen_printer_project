@@ -1,3 +1,5 @@
+var user = require("../models/user");
+
 module.exports = function(app, passport) {
 
     // This would eventually be a route to the home page (with link to the login page) ========
@@ -84,7 +86,22 @@ module.exports = function(app, passport) {
             user : req.user // get the user out of session and pass to template
         });
     });
+    app.get('/placeorder', isAuthenticated, function(req, res) {
+        res.render('placeorder', {
+            user : req.user // get the user out of session and pass to template
+        });
+    });
 
+    app.post("/newOrder", function(req,res){
+        var newUserProps = [req.body.username,req.body.size, req.body.price, req.body.shirt_type, req.body.color, req.body.quantity, req.body.notes];
+       console.log(newUserProps)
+        user.create(["username", "size", "price", "shirt_type", "color","quantity", "notes"], newUserProps,
+            function(result) {
+                res.json({id: result.insertId});
+                console.log("worked?")
+            });
+        console.log(user);
+    });
 
     // =====================================
     // LOGOUT ==============================

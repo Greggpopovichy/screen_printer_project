@@ -13,11 +13,7 @@ body{
 }
 
 
-#login{
-    margin-bottom: 15px;
-}
-
-#loginForm, #registerForm, #forgotPWForm{
+#registerForm, #forgotPWForm{
     margin-top: 5%;
 }
 .submit{
@@ -28,13 +24,10 @@ body{
 }
 
 li.tab.col.s6.active {
-    background-color:white;
-    color:#0d47a1;
+    color:red;
 } /*Background and text color when a tab is active*/
 
-.li.indicator {
-    background-color:#0d47a1;
-} /*Color of underline*/
+
 
 a.brand-logo{
     font-size: 62px;
@@ -44,9 +37,7 @@ a.brand-logo{
 }
 
 div.col.s12.card{
-    margin-top: 30px;
 }
-
 
 #profileCard{
     margin-top: 10px;
@@ -69,7 +60,7 @@ div.col.s12.card{
 }
 
 .btn-floating:hover{
-    background-color: #9e9e9e;
+    background-color: red;
 }
 
 /*MASONRY SHIT*/
@@ -94,11 +85,11 @@ ul.left li a{
 }
 
 ul.left li{
-    padding-left: 10px;
+
 }
 
 ul.right li {
-    padding-right: 10px;
+
 }
 
 ul.right li a{
@@ -114,12 +105,7 @@ nav ul li {
     margin-top:60px;
     float:none;
 }
-/*.row .col.s8{*/
-    /*left:inherit;*/
-    /*right:auto;*/
-    /*float:left;*/
-    /*margin-left: 70px;*/
-/*}*/
+
 
 .colorBox {
     align-items: center;
@@ -169,13 +155,65 @@ nav{
 }
 
 .login-image{
-    background-image: url("https://i.pinimg.com/originals/36/cf/76/36cf76bef9b5b80937bc26ec86e30268.jpg");
+    background-image: url("https://i.pinimg.com/originals/75/c6/1b/75c61bc2227f121a4e39f3b753a1446c.jpg");
     background-repeat: no-repeat;
     height: 100vh;
     background-size: cover;
 }
 
-#loginCard{
-    width: 75%;
+#loginTitle{
+    padding-top: 15px;
+    padding-bottom:25px;
+
 }
 
+#userNameInput{
+    text-align: center;
+    padding-top:5px;
+}
+
+#passwordInput{
+    text-align: center
+}
+
+#userNameInputLabel{
+    font-size: 18px;
+}
+
+#passwordInputLabel{
+    font-size: 18px;
+}
+
+#password-input{
+    width: 95%;
+}
+
+#username-input {
+    width: 95%;
+}
+
+#registerAccount{
+    font-size: 18px;
+}
+
+.form {
+    display: inline-block;
+}
+
+#loginCard{
+    width: 35%;
+    text-align: center;
+    margin: 0rem;
+}
+
+#loginForm{
+
+}
+
+#usernameIcon.material-icons{
+
+}
+
+#passwordIcon.material-icons{
+
+}

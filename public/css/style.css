@@ -181,6 +181,7 @@ nav{
 }
 
 #loginCard{
+
     padding-top:25px;
     text-align: center;
 }
@@ -239,5 +240,19 @@ p.center-align{
 
 #noAccount{
     padding-top:10px;
+}
+
+
+
+#loginCard{
+    margin-top:0px;
+}
+
+.row .col{
+    float: none;
+}
+
+#loginButtonRow{
+    margin-bottom:0px;
 }
 

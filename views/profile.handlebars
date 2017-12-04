@@ -31,11 +31,15 @@
         {{#each orders}}
             <li>
                 <p>
-                    {{this.username}}. {{this.quantity}}
+                    username:{{this.username}}
+                    quantity: {{this.quantity}}
+                    price: {{orders.price}}
 
-                    <button data-planid="{{this.id}}" class="delplan">Delete Plan!</button>
                 </p>
             </li>
         {{/each}}
     </ul>
 </div>
+<script>
+    console.log("{{orders}}")
+</script>

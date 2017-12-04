@@ -90,21 +90,14 @@ module.exports = function(app, passport) {
     //Trying to get so that all orders for logged in user will appear on the profiles page. Havent tried to bring
     //it back yet with handlebars, im just trying to console log the data for now.
     app.get('/profile', isAuthenticated, function(req, res) {
-        console.log(req);
-        res.render('profile', {
-            user : req.user // get the user out of session and pass to template
-        });
 
         connection.query("SELECT * FROM orders WHERE username = ?",[req.user.username], function(err, data) {
             console.log(err)
             if (err) {
                 return res.status(500).end();
             }
-            console.log(data)
-            console.log(data[0])
-            res.render("profile", {
-                orders: data,
-                user : req.user });
+            console.log(data.RowDataPacket)
+            res.render("profile", { orders: JSON.stringify(data), user : req.user });
         });
 
 

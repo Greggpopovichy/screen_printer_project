@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a4065d15-0256-41a9-8e99-3ed01674640c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/about.handlebars" afterPath="$PROJECT_DIR$/views/about.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.handlebars" afterPath="$PROJECT_DIR$/views/login.handlebars" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/profile.handlebars" afterPath="$PROJECT_DIR$/views/profile.handlebars" />
     </list>
@@ -22,6 +22,7 @@
       <file leaf-file-name="routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.js">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="2108">
               <caret line="124" column="32" lean-forward="true" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
               <folding />
@@ -32,8 +33,14 @@
       <file leaf-file-name="login.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/login.handlebars">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="6" />
+=======
+
+            <state relative-caret-position="198">
+              <caret line="31" column="15" lean-forward="true" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
               <folding />
             </state>
           </provider>
@@ -59,6 +66,7 @@
           </provider>
         </entry>
       </file>
+
       <file leaf-file-name="database.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -82,6 +90,7 @@
       <file leaf-file-name="placeorder.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/placeorder.handlebars">
           <provider selected="true" editor-type-id="text-editor">
+
             <state relative-caret-position="-4477">
               <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
               <folding />
@@ -99,7 +108,12 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="about.handlebars" pinned="false" current-in-tab="true">
+=======
+
+      <file leaf-file-name="about.handlebars" pinned="false" current-in-tab="false">
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
         <entry file="file://$PROJECT_DIR$/views/about.handlebars">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
@@ -147,6 +161,11 @@
         <option value="$PROJECT_DIR$/app/routes.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/views/placeorder.handlebars" />
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/views/about.handlebars" />
+
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
         <option value="$PROJECT_DIR$/views/login.handlebars" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/views/profile.handlebars" />
@@ -283,12 +302,22 @@
       <option name="presentableId" value="Default" />
       <updated>1512086223771</updated>
       <workItem from="1512086225049" duration="24165000" />
+<<<<<<< HEAD
       <workItem from="1512227377485" duration="34760000" />
+=======
+
+      <workItem from="1512227377485" duration="31308000" />
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="58925000" />
+=======
+
+    <option name="totallyTimeSpent" value="55473000" />
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1280" height="773" extended-state="6" />
@@ -429,6 +458,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/checkauth.handlebars">
+
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
@@ -460,14 +490,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
+    <entry file="file://$PROJECT_DIR$/scripts/create_db.js">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="198">
           <caret line="12" column="11" lean-forward="true" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="63">
@@ -476,6 +508,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/views/signup.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -484,6 +517,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/app/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
@@ -492,6 +526,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/config/database.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-108">
@@ -500,14 +535,28 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+
+    <entry file="file://$PROJECT_DIR$/views/profile.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="28" column="51" lean-forward="true" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
     <entry file="file://$PROJECT_DIR$/views/placeorder.handlebars">
       <provider selected="true" editor-type-id="text-editor">
+
         <state relative-caret-position="-4477">
           <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/public/js/users.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -516,7 +565,12 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/public/css/style.css">
+=======
+
+    <entry file="file://$PROJECT_DIR$/views/about.handlebars">
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="121" column="18" lean-forward="false" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
@@ -524,6 +578,7 @@
         </state>
       </provider>
     </entry>
+
     <entry file="file://$PROJECT_DIR$/views/login.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -534,6 +589,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/profile.handlebars">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-210">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
@@ -544,6 +600,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+=======
+
+        <state relative-caret-position="289">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
           <folding />
         </state>
       </provider>

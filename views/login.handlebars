@@ -9,45 +9,31 @@
     </div>
 </nav>
 
-<div class ="container" id ="loginForm">
-<div class="row" align="center">
-    <div class="login-image col s12 card white z-depth-5" align="center">
-        <div class="card col s12 white z-depth-5" id="loginCard" align="center">
-            <div class="card-content black-text" align="center">
-                <form id ="form" method="post" action="/login" class="justify-content-center">
-                <h4 class="center-align black-text">Login</h4>
-                <div class ="row">
-                <div class="form-group col s8 white">
-                    <i class="material-icons prefix">account_circle</i>
-                    <label>User Name: </label>
-                    <input class="form-control" id="username-input" class = "validate" name ="username" type="text" required>
-                        </div>
-                            </div>
-            <div class ="row col s12">
-                <div class="form-group col s8 white">
-                    <i class="material-icons prefix">lock_outline</i>
-                    <label>Password: </label>
-                    <input class="form-control " id="password-input" class = "validate" name ="password" type="password" required>
+<div class="login-image z-depth-5">
+    <div class="row">
+    <div class="card center-align" id="loginCard">
+        <form id ="loginForm" method="post" action="/login" class="">
+                <div class="form-group black-text col xs12" id="userNameInput">
+                    <i class="material-icons tiny" id="usernameIcon">account_circle</i>
+                    <label class="black-text" id="userNameInputLabel">User Name: </label>
+                    <input class="form-control validate black-text" id="username-input"  name ="username" type="text" required>
                 </div>
+                <div class="form-group black-text col xs12" id="passwordInput">
+                    <i class="material-icons tiny" id="passwordIcon">lock_outline</i>
+                    <label class="black-text" id="passwordInputLabel">
+                        Password: </label>
+                    <input class="form-control validate black-text" id="password-input"  name ="password" type="password" required>
+                </div>
+                <div class = "row black-text center-align col xs12">
+                    <strong>Don't have an account? Sign up </strong><a class="links" id="registerAccount" href="/signup"> <strong> here</strong></a>
+                </div>
+            <div class="row center-align section">
+                <button class="btn waves-effect waves-light red" id="login" type="submit" name="action">Login</button>
             </div>
-
-            <div class = "row col s12">
-                <a class="links white-text accent-4-text" id="registerAccount" href="/signup"><strong>Don't have an account? Sign up here</strong></a>
-            </div>
-
-            <div class="row col s12 center-align center section">
-                <button class="btn white-text" id="login" type="submit" name="action">Login</button>
-                    </div>
-                </form>
-            </div>
+        </form>
         </div>
     </div>
 </div>
-
-    <footer class="row col s12">
-        <p><a href="/logout">Logout</a></p>
-    </footer>
-
-</div>
-
-
+<footer class="row col s12">
+    <p><a href="/logout">Logout</a></p>
+</footer>

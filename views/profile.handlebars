@@ -28,18 +28,16 @@
 <div>
 <h3> View Orders</h3>
     <ul>
-        {{#each orders}}
+
             <li>
                 <p>
-                    username:{{this.username}}
-                    quantity: {{this.quantity}}
+                    username:{{orders.username}}
+                    quantity: {{orders.quantity}}
                     price: {{orders.price}}
 
                 </p>
             </li>
-        {{/each}}
     </ul>
 </div>
-<script>
-    console.log("{{orders}}")
-</script>
+
+

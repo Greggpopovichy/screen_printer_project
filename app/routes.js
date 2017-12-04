@@ -92,18 +92,16 @@ module.exports = function(app, passport) {
     app.get('/profile', isAuthenticated, function(req, res) {
 
         connection.query("SELECT * FROM orders WHERE username = ?",[req.user.username], function(err, data) {
-            console.log(err)
+            console.log(err);
             if (err) {
                 return res.status(500).end();
             }
-            console.log(data.RowDataPacket)
+            console.log(data.RowDataPacket);
             res.render("profile", { orders: JSON.stringify(data), user : req.user });
         });
 
 
     });
-
-
 
     app.get('/placeorder', isAuthenticated, function(req, res) {
         res.render('placeorder', {
@@ -112,13 +110,26 @@ module.exports = function(app, passport) {
     });
 
     //Trying to get this data to post to the table when you click "place order"
-    app.post("/newOrder", function(req,res){
 
+    // app.get("/newOrder", isAuthenticated, function(req, res) {
+    //     console.log(req.body.username);
+    //     var username = req.body.username;
+    //     connection.query("SELECT * FROM orders WHERE (username) VALUES(?)", [username], function(err, data) {
+    //         if (err) {
+    //             return res.status(500).end();
+    //         }
+    //         return res.json(data);
+    //         // res.render("newOrder", { orders: data });
+    //     });
+    // });
+
+
+    app.post("/newOrder", function(req,res) {
         var newUserProps = [req.body.username,req.body.size, req.body.price, req.body.shirt_type, req.body.color, req.body.quantity, req.body.notes];
-        connection.query("INSERT INTO orders (username,size,price,shirt_type,color,quantity,notes) VALUES (?, ?, ?, ?, ?, ?, ?)",newUserProps, function(err, data) {
-
-                res.json(data);
-            });
+        connection.query("SELECT * FROM orders WHERE(username, size, price, shirt_type, color, quantity, notes) VALUES (?, ?, ?, ?, ?, ?, ?)", newUserProps, function (err, data) {
+            //res.render("newOrder", { orders: JSON.stringify(data), user : req.user });
+            res.json(data);
+        });
     });
 
     // =====================================
@@ -133,16 +144,6 @@ module.exports = function(app, passport) {
 
 };
 
-// route middleware to make sure
-// function isLoggedIn(req, res, next) {
-//
-//     // if user is authenticated in the session, carry on
-//     if (req.isAuthenticated())
-//         return next();
-//
-//     // if they aren't redirect them to the home page
-//     res.redirect('/');
-// }
 function isAuthenticated(req,res,next){
     if(req.user)
         return next();

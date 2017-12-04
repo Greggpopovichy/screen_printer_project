@@ -250,18 +250,16 @@ var color;
             var shirtType = $(".shirt_type").val()
             var notes = $("#notes").val()
 
-            var newUserOrder = {
-                var uname = "{{user.username}}";
 
-                var newUserOrder = {
-                    username: uname,
-                    size: size,
-                    price: price,
-                    shirt_type: shirtType,
-                    color: color,
-                    quantity: quantity,
-                    notes: notes
-                };
+            var newUserOrder = {
+                username: "{{user.username}}",
+                size: size,
+                price: price,
+                shirt_type: shirtType,
+                color: color,
+                quantity: quantity,
+                notes: notes
+            };
 
             console.log(newUserOrder);
 
@@ -281,13 +279,13 @@ var color;
                 type: "POST",
                 data: newUserOrder
             }).then(function () {
-                        //this should log to browser console to let us know that the database has been updated
-                        console.log("created new order");
-                        // Reload the page to get the updated list
-                        location.reload();
-                    }
-            )
-        }
+                //this should log to browser console to let us know that the database has been updated
+                console.log("created new order");
+                // Reload the page to get the updated list
+                location.reload();
+            })
+        })
+
 
 
 

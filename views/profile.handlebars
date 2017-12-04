@@ -15,13 +15,13 @@
     <div class="row col s12">
             <div class="card blue-grey darken-1" id="profileCard">
                 <div class="card-content white-text">
-                    <span class="card-title">Welcome {{ user.user_first_name }}, checkout your information below!</span>
+                    <span class="card-title center">Welcome {{ user.user_first_name }}, checkout your information below!</span>
                     <p>
-                        <strong>Username</strong>: {{user.username }}<br>
-                        <strong>First Name</strong>: {{ user.user_first_name }}<br>
-                        <strong>Last Name</strong>: {{ user.user_last_name }}<br>
-                        <strong>Phone Number</strong>: {{ user.user_number }}<br>
-                        <strong>Email</strong>: {{ user.user_email }}<br>
+                        <strong class="center">Username</strong>: {{user.username }}<br>
+                        <strong class="center">First Name</strong>: {{ user.user_first_name }}<br>
+                        <strong class="center">Last Name</strong>: {{ user.user_last_name }}<br>
+                        <strong class="center">Phone Number</strong>: {{ user.user_number }}<br>
+                        <strong class="center">Email</strong>: {{ user.user_email }}<br>
                     </p>
                 </div>
             </div>
@@ -36,11 +36,15 @@
         {{#each orders}}
             <li>
                 <p>
-                    {{this.username}}. {{this.quantity}}
+                    username:{{this.username}}
+                    quantity: {{this.quantity}}
+                    price: {{orders.price}}
 
-                    <button data-planid="{{this.id}}" class="delplan">Delete Plan!</button>
                 </p>
             </li>
         {{/each}}
     </ul>
 </div>
+<script>
+    console.log("{{orders}}")
+</script>

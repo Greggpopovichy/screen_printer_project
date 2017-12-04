@@ -1,39 +1,38 @@
-
-<nav class= "black-text white">
+<nav class="white">
     <div class= "nav-wrapper">
         <a href="/about" class="brand-logo center black-text">Chuck's Tees</a>
-        <ul id="nav-mobile" class="center-align hide-on-med-and-down">
-            <li><a href="/signup" class="black-text">Sign Up</a></li>
-            <li><a href="/about" class="black-text">Home</a></li>
+        <ul id="nav-mobile" class="center-align">
+            <li><a href="/signup" class="navSignup">Sign Up</a></li>
+            <li><a href="/about" class="navAbout">Home</a></li>
         </ul>
     </div>
 </nav>
 
 <div class="login-image z-depth-5">
-    <div class="row">
+
+    <div class="row valign-wrapper">
     <div class="card center-align col l8 offset-l2" id="loginCard">
         <form id ="loginForm" method="post" action="/login" class="">
-                <div class="form-group black-text col xs12" id="userNameInput">
-                    <i class="material-icons tiny" id="usernameIcon">account_circle</i>
-                    <label class="black-text" id="userNameInputLabel">User Name: </label>
-                    <input class="form-control validate black-text" id="username-input"  name ="username" type="text" required>
-                </div>
-                <div class="form-group black-text col xs12" id="passwordInput">
-                    <i class="material-icons tiny" id="passwordIcon">lock_outline</i>
-                    <label class="black-text" id="passwordInputLabel">
-                        Password: </label>
-                    <input class="form-control validate black-text" id="password-input"  name ="password" type="password" required>
-                </div>
-                <div class = "row black-text col xs12">
-                    <strong>Don't have an account? Sign up </strong><a class="links" id="registerAccount" href="/signup"> <strong> here</strong></a>
-                </div>
-            <div class="row center-align" id="loginButtonRow">
+            <div class="form-group black-text" id="userNameInput">
+                <i class="material-icons tiny" id="usernameIcon">account_circle</i>
+                <label class="black-text" id="userNameInputLabel">User Name </label>
+                <input class="form-control validate black-text" id="username-input"  name ="username" type="text" required>
+            </div>
+            <div class="form-group black-text" id="passwordInput">
+                <i class="material-icons tiny" id="passwordIcon">lock_outline</i>
+                <label class="black-text" id="passwordInputLabel">
+                    Password </label>
+                <input class="form-control validate black-text" id="password-input"  name ="password" type="password" required>
+            </div>
+            <div class="form-group center-align" id="loginButtonRow">
                 <button class="btn waves-effect waves-light red" id="loginButton" type="submit" name="action">Login</button>
+            </div>
+            <div class = "form-group black-text" id="noAccount">
+                <strong>Don't have an account? Sign up </strong><a class="links" id="registerAccount" href="/signup"> here</a> or <a href="/logout" id="logoutButton"> logout</a>.
             </div>
         </form>
         </div>
     </div>
 </div>
-<footer class="row col s12">
-    <p><a href="/logout">Logout</a></p>
-</footer>
+
+

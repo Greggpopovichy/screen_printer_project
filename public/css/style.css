@@ -206,8 +206,26 @@ nav{
     color: black;
 }
 
+.navLogin{
+    color:black;
+}
+
 .navPlaceorder{
     color: black;
+}
+
+.navProfile{
+    color: black;
+}
+
+.navProfile:hover{
+    color:red;
+    background-color: transparent;
+}
+
+.navLogin:hover{
+    color:red;
+    background-color: transparent;
 }
 
 .navHome:hover{
@@ -231,7 +249,7 @@ nav{
 }
 
 #logoutButton {
-    color: red;
+    color: white;
 }
 
 p.center-align{
@@ -254,5 +272,10 @@ p.center-align{
 
 #loginButtonRow{
     margin-bottom:0px;
+}
+
+#signupSubmit{
+    background-color:red;
+    color: white;
 }
 

@@ -97,13 +97,9 @@ module.exports = function(app, passport) {
                 return res.status(500).end();
             }
             console.log(data.RowDataPacket);
-            res.render("profile", { user : req.user });
+            res.render("profile", { orders : data, user: req.user });
         });
-
-
     });
-
-
 
     app.get('/placeorder', isAuthenticated, function(req, res) {
         res.render('placeorder', {
@@ -111,16 +107,7 @@ module.exports = function(app, passport) {
         });
     });
 
-    app.get("/newOrder", isAuthenticated, function(req, res) {
-        var username = req.body.username;
-        connection.query("SELECT * FROM orders WHERE (username) VALUES(?)", [username], function(err, data) {
-            if (err) {
-                return res.status(500).end();
-            }
-            return res.json(data);
-            // res.render("newOrder", { orders: data });
-        });
-    });
+
     //Trying to get this data to post to the table when you click "place order"
     app.post("/newOrder", isAuthenticated, function(req,res){
         var newUserProps = [req.body.username,req.body.size, req.body.price, req.body.shirt_type, req.body.color, req.body.quantity, req.body.notes];
@@ -129,14 +116,6 @@ module.exports = function(app, passport) {
             });
     });
 
-
-
-    // app.get("/newOrder", function(req,res) {
-    //     var newUserProps = [req.body.username,req.body.size, req.body.price, req.body.shirt_type, req.body.color, req.body.quantity, req.body.notes];
-    //     connection.query("SELECT * FROM orders WHERE(username, size, price, shirt_type, color, quantity, notes) VALUES (?, ?, ?, ?, ?, ?, ?)", newUserProps, function (err, data) {
-    //         res.render("newOrder", { orders: JSON.stringify(data), user : req.user });
-    //     });
-    // });
 
     // =====================================
     // LOGOUT ==============================

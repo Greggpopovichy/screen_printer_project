@@ -1,4 +1,4 @@
-<nav class="white" id="profileNav">
+<nav class="white">
     <div class ="nav-wrapper">
         <a href="/about" class="brand-logo center black-text">Chuck's Tees</a>
         <ul id="nav-mobile" class="center-align">
@@ -27,17 +27,15 @@
 </div>
 <div>
 <h3> View Orders</h3>
-    <ul>
-
-            <li>
-                <p>
-                    username:{{orders.username}}
-                    quantity: {{orders.quantity}}
-                    price: {{orders.price}}
-
-                </p>
-            </li>
-    </ul>
+    {{#each orders}}
+        <li>
+            <p>
+                username:{{this.username}}
+                quantity: {{this.quantity}}
+                price: {{this.price}}
+            </p>
+        </li>
+    {{/each}}
 </div>
 
 

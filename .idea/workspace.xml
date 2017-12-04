@@ -5,6 +5,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.handlebars" afterPath="$PROJECT_DIR$/views/login.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/profile.handlebars" afterPath="$PROJECT_DIR$/views/profile.handlebars" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,9 +33,14 @@
       <file leaf-file-name="login.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/login.handlebars">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="6" />
+=======
 
             <state relative-caret-position="198">
               <caret line="31" column="15" lean-forward="true" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
               <folding />
             </state>
           </provider>
@@ -74,8 +80,8 @@
       <file leaf-file-name="profile.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/profile.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="28" column="51" lean-forward="true" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+            <state relative-caret-position="-210">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,22 +108,26 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="about.handlebars" pinned="false" current-in-tab="true">
+=======
 
       <file leaf-file-name="about.handlebars" pinned="false" current-in-tab="false">
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
         <entry file="file://$PROJECT_DIR$/views/about.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="35" column="29" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="35" selection-end-column="29" />
+            <state relative-caret-position="136">
+              <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+            <state relative-caret-position="110">
+              <caret line="121" column="18" lean-forward="false" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -147,15 +157,19 @@
         <option value="$PROJECT_DIR$/public/js/users.js" />
         <option value="$PROJECT_DIR$/views/checkauth.handlebars" />
         <option value="$PROJECT_DIR$/scripts/create_db.js" />
-        <option value="$PROJECT_DIR$/views/profile.handlebars" />
         <option value="$PROJECT_DIR$/views/signup.handlebars" />
         <option value="$PROJECT_DIR$/app/routes.js" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/views/placeorder.handlebars" />
+<<<<<<< HEAD
+=======
         <option value="$PROJECT_DIR$/views/about.handlebars" />
 
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
         <option value="$PROJECT_DIR$/views/login.handlebars" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/views/profile.handlebars" />
+        <option value="$PROJECT_DIR$/views/about.handlebars" />
       </list>
     </option>
   </component>
@@ -288,17 +302,26 @@
       <option name="presentableId" value="Default" />
       <updated>1512086223771</updated>
       <workItem from="1512086225049" duration="24165000" />
+<<<<<<< HEAD
+      <workItem from="1512227377485" duration="34760000" />
+=======
 
       <workItem from="1512227377485" duration="31308000" />
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="58925000" />
+=======
 
     <option name="totallyTimeSpent" value="55473000" />
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1280" height="773" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.123907864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -512,6 +535,8 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
 
     <entry file="file://$PROJECT_DIR$/views/profile.handlebars">
       <provider selected="true" editor-type-id="text-editor">
@@ -521,6 +546,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
     <entry file="file://$PROJECT_DIR$/views/placeorder.handlebars">
       <provider selected="true" editor-type-id="text-editor">
 
@@ -539,11 +565,15 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+=======
 
     <entry file="file://$PROJECT_DIR$/views/about.handlebars">
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="35" column="29" lean-forward="true" selection-start-line="26" selection-start-column="24" selection-end-line="35" selection-end-column="29" />
+        <state relative-caret-position="110">
+          <caret line="121" column="18" lean-forward="false" selection-start-line="121" selection-start-column="18" selection-end-line="121" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -551,17 +581,30 @@
 
     <entry file="file://$PROJECT_DIR$/views/login.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="31" column="15" lean-forward="true" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+    <entry file="file://$PROJECT_DIR$/views/profile.handlebars">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="-210">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/about.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+=======
 
         <state relative-caret-position="289">
           <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+>>>>>>> 604990cb91a845551489c90a96a417e4cb8e928c
           <folding />
         </state>
       </provider>

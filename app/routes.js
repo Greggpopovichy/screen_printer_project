@@ -95,11 +95,11 @@ module.exports = function(app, passport) {
             if (err) {
                 return res.status(500).end();
             }
-            res.render("profile", { orders : data, user: req.user});
+
+            console.log(data.RowDataPacket);
+            res.render("profile", { orders : data, user: req.user });
         });
     });
-
-
 
     app.get('/placeorder', isAuthenticated, function(req, res) {
         res.render('placeorder', {
@@ -107,15 +107,15 @@ module.exports = function(app, passport) {
         });
     });
 
-    //Trying to get this data to post to the table when you click "place order"
-    app.post("/newOrder", function(req,res){
 
+    //Trying to get this data to post to the table when you click "place order"
+    app.post("/newOrder", isAuthenticated, function(req,res){
         var newUserProps = [req.body.username,req.body.size, req.body.price, req.body.shirt_type, req.body.color, req.body.quantity, req.body.notes];
         connection.query("INSERT INTO orders (username,size,price,shirt_type,color,quantity,notes) VALUES (?, ?, ?, ?, ?, ?, ?)",newUserProps, function(err, data) {
-
                 res.json(data);
             });
     });
+
 
     // =====================================
     // LOGOUT ==============================

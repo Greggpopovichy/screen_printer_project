@@ -2,6 +2,10 @@ body{
     font-family: 'Roboto Slab', serif;
 }
 
+.grey.lighten-4{
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .test {
     text-align:center;
     margin-bottom:10px;
@@ -10,29 +14,45 @@ body{
 .links{
     display:inline-block;
     margin-bottom:10px;
-    color:red;
 }
 
-#registerForm, #forgotPWForm{
+
+#login{
+    margin-bottom: 15px;
+}
+
+#loginForm, #registerForm, #forgotPWForm{
     margin-top: 5%;
 }
-
 .submit{
     margin-bottom:10px;
 }
+:link {
+    color:black;
+}
 
- /*Background and text color when a tab is active*/
+
+li.tab.col.s6.active {
+    background-color:white;
+    color:#0d47a1;
+} /*Background and text color when a tab is active*/
+
+.li.indicator {
+    background-color:#0d47a1;
+} /*Color of underline*/
 
 a.brand-logo{
-    font-size: 62px;
+    font-size: 48px;
+    padding-top: 10%;
     color: #0d47a1;
+    font-family: 'Roboto Slab', serif;
     text-align: center;
-    padding-top: 20px;
 }
 
 div.col.s12.card{
-
+    margin-top: 30px;
 }
+
 
 #profileCard{
     margin-top: 10px;
@@ -55,7 +75,7 @@ div.col.s12.card{
 }
 
 .btn-floating:hover{
-    background-color: red;
+    background-color: #9e9e9e;
 }
 
 /*MASONRY SHIT*/
@@ -65,8 +85,46 @@ div.col.s12.card{
 /* force scrollbar */
 html { overflow-y: scroll; }
 
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+    background: #01579b;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 33.333%;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    width: 300px;
+    height:300px;
+    padding: 10px;
+}
 
 /*new nav*/
+
+
+nav{
+    background-color: #b0bec5;
+    height: 72px;
+}
 
 ul.left li a{
     font-size: large;
@@ -74,22 +132,29 @@ ul.left li a{
     height: 72px;
 }
 
-/* NEW STUFF*/
-
-ul#nav-mobile{
-    padding-top:30px;
+ul.left li{
+    padding-left: 10px;
 }
 
+ul.right li {
+    padding-right: 10px;
+}
+
+ul.right li a{
+
+}
+/* NEW STUFF*/
 nav ul li {
     display:inline-block;
     margin-top:60px;
     float:none;
-    color:black;
 }
-
-nav ul li:hover {
-    color: red;
-}
+/*.row .col.s8{*/
+/*left:inherit;*/
+/*right:auto;*/
+/*float:left;*/
+/*margin-left: 70px;*/
+/*}*/
 
 .colorBox {
     align-items: center;
@@ -113,128 +178,19 @@ nav ul li:hover {
     height: 320px;
     margin: 45px;
 }
-
 p{
+    margin-top:75px;
+    margin-left: 20%;
+    margin-right: 20%;
     text-align: center;
 }
-
 nav{
-    height:150px;
+    height:175px;
 }
-
 /*.pickQuantity {*/
-    /*display: inline;*/
-    /*margin-left: 25%;*/
+/*display: inline;*/
+/*margin-left: 25%;*/
 /*}*/
 #quantity{
     width:25%;
 }
-
-
-.iris {
-    background-image: url("http://1.bp.blogspot.com/-SYNmi5QKsFs/UrR9KPsUQJI/AAAAAAAAD6M/iW0aYcSjo0E/s1600/IMG_6993.JPG");
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
-}
-
-.login-image{
-    background-image: url("https://i.pinimg.com/originals/75/c6/1b/75c61bc2227f121a4e39f3b753a1446c.jpg");
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
-}
-
-#loginTitle{
-    padding-top: 15px;
-    padding-bottom:25px;
-}
-
-#userNameInput{
-    text-align: center;
-    padding-top:5px;
-}
-
-#passwordInput{
-    text-align: center
-}
-
-#userNameInputLabel{
-    font-size: 18px;
-}
-
-#passwordInputLabel{
-    font-size: 18px;
-}
-
-#password-input{
-    width: 70%;
-}
-
-#username-input {
-    width: 70%;
-}
-
-
-.form {
-    display: inline-block;
-}
-
-#loginCard{
-
-    padding-top:25px;
-    text-align: center;
-}
-
-.row .col{
-    float: none;
-}
-
-#loginButtonRow{
-    margin-bottom:0px;
-}
-
-.navAbout{
-    color:black;
-}
-
-.navSignup{
-    color: black;
-}
-
-.navSignup:hover{
-    color:red;
-    background-color: transparent;
-}
-
-.navAbout:hover{
-    color:red;
-    background-color: transparent;
-}
-
-#logoutButton {
-    color: red;
-}
-
-p.center-align{
-    padding-bottom: 10px;
-}
-
-#noAccount{
-    padding-top:10px;
-}
-
-
-
-#loginCard{
-    margin-top:0px;
-}
-
-.row .col{
-    float: none;
-}
-
-#loginButtonRow{
-    margin-bottom:0px;
-}
-

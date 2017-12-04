@@ -1,11 +1,11 @@
-<nav class = "grey darken-2 white-text">
+<nav class = "white">
     <div class ="nav-wrapper">
-        <a href="/about" class="brand-logo center">Chuck's Tees</a>
-        <ul id="nav-mobile" class="center-align hide-on-med-and-down">
-            <li><a href="/about">Home</a></li>
-            <li><a href="/placeorder">Place Order</a></li>
-            <li><a href="/login">Login</a></li>
-            <li><a href="/signup">Sign Up</a></li>
+        <a href="/about" class="brand-logo center black-text">Chuck's Tees</a>
+        <ul id="nav-mobile" class="center-align">
+            <li><a href="/about" class="navAbout">Home</a></li>
+            <li><a href="/profile" class="navProfile">Profile</a></li>
+            <li><a href="/placeorder" class="navLogin">Place Order</a></li>
+            <li><a href="/logout" class="navSignup">Logout</a></li>
         </ul>
     </div>
 </nav>
@@ -14,24 +14,21 @@
 <div class="container">
     <div class="row col s12">
             <div class="card blue-grey darken-1" id="profileCard">
-                <div class="card-content white-text">
-                    <span class="card-title center">Welcome {{ user.user_first_name }}, checkout your information below!</span>
+                <div class="card-content white-text red center-align">
+                    <span class="card-title">Welcome {{ user.user_first_name }}, checkout your information below! Not {{ user.user_first_name }}? Logout <a href="/logout" id="logoutButton"> here</a>.</span>
                     <p>
-                        <strong class="center">Username</strong>: {{user.username }}<br>
-                        <strong class="center">First Name</strong>: {{ user.user_first_name }}<br>
-                        <strong class="center">Last Name</strong>: {{ user.user_last_name }}<br>
-                        <strong class="center">Phone Number</strong>: {{ user.user_number }}<br>
-                        <strong class="center">Email</strong>: {{ user.user_email }}<br>
-                    </p>
+                        <strong>Username</strong>: {{user.username }}<br>
+                        <strong>First Name</strong>: {{ user.user_first_name }}<br>
+                        <strong>Last Name</strong>: {{ user.user_last_name }}<br>
+                        <strong>Phone Number</strong>: {{ user.user_number }}<br>
+                        <strong>Email</strong>: {{ user.user_email }}<br>
                 </div>
             </div>
-        <footer class="row col s12">
-                <p><a href="/logout">Logout</a></p>
-        </footer>
     </div>
 </div>
 <div>
 <h3> View Orders</h3>
+
     <ul>
         {{#each orders}}
             <li>
@@ -43,7 +40,7 @@
             </li>
         {{/each}}
     </ul>
+
 </div>
-<script>
-    console.log("{{orders}}")
-</script>
+
+

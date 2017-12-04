@@ -10,8 +10,8 @@ body{
 .links{
     display:inline-block;
     margin-bottom:10px;
+    color:red;
 }
-
 
 #registerForm, #forgotPWForm{
     margin-top: 5%;
@@ -21,15 +21,7 @@ body{
     margin-bottom:10px;
 }
 
-:link {
-    color:black;
-}
-
-li.tab.col.s6.active {
-    color:red;
-} /*Background and text color when a tab is active*/
-
-
+ /*Background and text color when a tab is active*/
 
 a.brand-logo{
     font-size: 62px;
@@ -39,6 +31,7 @@ a.brand-logo{
 }
 
 div.col.s12.card{
+
 }
 
 #profileCard{
@@ -75,39 +68,28 @@ html { overflow-y: scroll; }
 
 /*new nav*/
 
-
-nav{
-    height: 72px;
-}
-
 ul.left li a{
     font-size: large;
     vertical-align: middle;
     height: 72px;
 }
 
-ul.left li{
-
-}
-
-ul.right li {
-
-}
-
-ul.right li a{
-
-}
 /* NEW STUFF*/
 
 ul#nav-mobile{
     padding-top:30px;
 }
+
 nav ul li {
     display:inline-block;
     margin-top:60px;
     float:none;
+    color:black;
 }
 
+nav ul li:hover {
+    color: red;
+}
 
 .colorBox {
     align-items: center;
@@ -137,7 +119,7 @@ p{
 }
 
 nav{
-    height:175px;
+    height:150px;
 }
 
 /*.pickQuantity {*/
@@ -186,40 +168,21 @@ nav{
 }
 
 #password-input{
-    width: 95%;
+    width: 70%;
 }
 
 #username-input {
-    width: 95%;
+    width: 70%;
 }
 
-#registerAccount{
-    font-size: 18px;
-}
 
 .form {
     display: inline-block;
 }
 
 #loginCard{
+    padding-top:25px;
     text-align: center;
-}
-
-#loginForm{
-
-}
-
-#usernameIcon.material-icons{
-
-}
-
-#passwordIcon.material-icons{
-
-}
-
-
-#loginCard{
-    margin-top:0px;
 }
 
 .row .col{
@@ -229,3 +192,34 @@ nav{
 #loginButtonRow{
     margin-bottom:0px;
 }
+
+.navAbout{
+    color:black;
+}
+
+.navSignup{
+    color: black;
+}
+
+.navSignup:hover{
+    color:red;
+    background-color: transparent;
+}
+
+.navAbout:hover{
+    color:red;
+    background-color: transparent;
+}
+
+#logoutButton {
+    color: red;
+}
+
+p.center-align{
+    padding-bottom: 10px;
+}
+
+#noAccount{
+    padding-top:10px;
+}
+

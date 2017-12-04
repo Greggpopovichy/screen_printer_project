@@ -20,7 +20,6 @@ require('./config/passport')(passport); // pass passport for configuration
 app.use(morgan('dev'));
 // set up express / middleware
 app.use(cookieParser()); // read cookies (needed for auth)
-app.use(session({ secret: 'session secret key' }));
 
 app.use(bodyParser.urlencoded({
     extended: true

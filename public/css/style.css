@@ -30,10 +30,6 @@ a.brand-logo{
     padding-top: 20px;
 }
 
-div.col.s12.card{
-
-}
-
 #profileCard{
     margin-top: 10px;
 }
@@ -122,6 +118,10 @@ nav{
     height:150px;
 }
 
+#profileNav{
+    height: 150px;
+}
+
 /*.pickQuantity {*/
     /*display: inline;*/
     /*margin-left: 25%;*/
@@ -199,6 +199,24 @@ nav{
 
 .navSignup{
     color: black;
+}
+
+.navHome{
+    color: black;
+}
+
+.navPlaceorder{
+    color: black;
+}
+
+.navHome:hover{
+    color:red;
+    background-color: transparent;
+}
+
+.navPlaceorder:hover{
+    color:red;
+    background-color:transparent;
 }
 
 .navSignup:hover{

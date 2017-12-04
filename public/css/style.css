@@ -16,9 +16,11 @@ body{
 #registerForm, #forgotPWForm{
     margin-top: 5%;
 }
+
 .submit{
     margin-bottom:10px;
 }
+
 :link {
     color:black;
 }
@@ -164,7 +166,6 @@ nav{
 #loginTitle{
     padding-top: 15px;
     padding-bottom:25px;
-
 }
 
 #userNameInput{
@@ -201,9 +202,7 @@ nav{
 }
 
 #loginCard{
-    width: 35%;
     text-align: center;
-    margin: 0rem;
 }
 
 #loginForm{
@@ -216,4 +215,17 @@ nav{
 
 #passwordIcon.material-icons{
 
+}
+
+
+#loginCard{
+    margin-top:0px;
+}
+
+.row .col{
+    float: none;
+}
+
+#loginButtonRow{
+    margin-bottom:0px;
 }

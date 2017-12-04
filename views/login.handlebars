@@ -11,7 +11,7 @@
 
 <div class="login-image z-depth-5">
     <div class="row">
-    <div class="card center-align" id="loginCard">
+    <div class="card center-align col l8 offset-l2" id="loginCard">
         <form id ="loginForm" method="post" action="/login" class="">
                 <div class="form-group black-text col xs12" id="userNameInput">
                     <i class="material-icons tiny" id="usernameIcon">account_circle</i>
@@ -24,11 +24,11 @@
                         Password: </label>
                     <input class="form-control validate black-text" id="password-input"  name ="password" type="password" required>
                 </div>
-                <div class = "row black-text center-align col xs12">
+                <div class = "row black-text col xs12">
                     <strong>Don't have an account? Sign up </strong><a class="links" id="registerAccount" href="/signup"> <strong> here</strong></a>
                 </div>
-            <div class="row center-align section">
-                <button class="btn waves-effect waves-light red" id="login" type="submit" name="action">Login</button>
+            <div class="row center-align" id="loginButtonRow">
+                <button class="btn waves-effect waves-light red" id="loginButton" type="submit" name="action">Login</button>
             </div>
         </form>
         </div>

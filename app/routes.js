@@ -1,5 +1,9 @@
 var user = require("../models/user");
+var mysql = require('mysql');
+var dbconfig = require('../config/database');
+var connection = mysql.createConnection(dbconfig.connection);
 
+connection.query('USE ' + dbconfig.database);
 module.exports = function(app, passport) {
 
     // This would eventually be a route to the home page (with link to the login page) ========
@@ -87,19 +91,25 @@ module.exports = function(app, passport) {
     //it back yet with handlebars, im just trying to console log the data for now.
     app.get('/profile', isAuthenticated, function(req, res) {
         console.log(req);
+        res.render('profile', {
+            user : req.user // get the user out of session and pass to template
+        });
+
         connection.query("SELECT * FROM orders WHERE username = ?",[req.user.username], function(err, data) {
             console.log(err)
             if (err) {
                 return res.status(500).end();
             }
-            console.log("Test" + data);
-            res.render("profile", { orders: data });
-        });
-        res.render('profile', {
-            user : req.user // get the user out of session and pass to template
+            console.log(data)
+            console.log(data[0])
+            res.render("profile", {
+                orders: data,
+                user : req.user });
         });
 
+
     });
+
 
 
     app.get('/placeorder', isAuthenticated, function(req, res) {
@@ -110,14 +120,12 @@ module.exports = function(app, passport) {
 
     //Trying to get this data to post to the table when you click "place order"
     app.post("/newOrder", function(req,res){
+
         var newUserProps = [req.body.username,req.body.size, req.body.price, req.body.shirt_type, req.body.color, req.body.quantity, req.body.notes];
-        console.log(newUserProps)
-        user.create(["username", "size", "price", "shirt_type", "color","quantity", "notes"], newUserProps,
-            function(result) {
-                res.json(result);
-                console.log("worked?")
+        connection.query("INSERT INTO orders (username,size,price,shirt_type,color,quantity,notes) VALUES (?, ?, ?, ?, ?, ?, ?)",newUserProps, function(err, data) {
+
+                res.json(data);
             });
-        console.log(user);
     });
 
     // =====================================

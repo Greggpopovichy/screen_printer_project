@@ -30,4 +30,17 @@
         </footer>
     </div>
 </div>
+<div>
+<h3> View Orders</h3>
+    <ul>
+        {{#each orders}}
+            <li>
+                <p>
+                    {{this.username}}. {{this.quantity}}
 
+                    <button data-planid="{{this.id}}" class="delplan">Delete Plan!</button>
+                </p>
+            </li>
+        {{/each}}
+    </ul>
+</div>

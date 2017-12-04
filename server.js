@@ -9,6 +9,8 @@ var flash = require('connect-flash');
 var exphbs = require("express-handlebars");
 var morgan = require('morgan');
 var path = require('path');
+var async = require('async');
+var crypto = require('crypto');
 // configuration ===============================================================
 // connect to our database
 
@@ -18,6 +20,8 @@ require('./config/passport')(passport); // pass passport for configuration
 app.use(morgan('dev'));
 // set up express / middleware
 app.use(cookieParser()); // read cookies (needed for auth)
+app.use(session({ secret: 'session secret key' }));
+
 app.use(bodyParser.urlencoded({
     extended: true
 }));

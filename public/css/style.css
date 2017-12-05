@@ -29,10 +29,6 @@ a.brand-logo{
     padding-top: 20px;
 }
 
-#profileCard{
-    margin-top: 10px;
-}
-
 .fixed-action-btn.horizontal ul{
     top: 10%;
     right: 0px;
@@ -325,4 +321,18 @@ p.center-align{
 #placeOrderContainer{
     background-color: rgba(255,255,255, 0.9);
     border-radius:15px;
+}
+
+#profileCard{
+    text-shadow: 1px 1px 0px white;
+    width:auto;
+}
+
+#orderCard{
+
+}
+
+#profileContainer{
+    background-color: rgba(255,255,255, 0.9);
+    width:75%;
 }

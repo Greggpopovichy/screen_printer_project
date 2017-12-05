@@ -25,8 +25,16 @@
                 <h3 class =“center”>Order History</h3>
             </div>
         </div>
+
             {{#each orders}}
-                <div class="card center z-depth-4" id="orderCard" style="width:50%">
+
+            <div class ="row">
+
+                <div class = "col s3">
+
+                </div>
+                <div class="card center col s6 z-depth-4" id="orderCard">
+
                         <div class=“center”>
                             <strong>Size: </strong>{{this.size }}<br>
                             <strong>Type of Shirt: </strong> {{ this.shirt_type }}<br>
@@ -34,10 +42,10 @@
                             <strong>Quantity: </strong>{{this.quantity}}<br>
                             <strong>Price: </strong> {{this.price}}<br>
                         </div>
-                    </div>
+                </div>
+            </div>
             {{/each}}
 
     </div>
 </div>
-
 

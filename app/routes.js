@@ -48,13 +48,13 @@ module.exports = function(app, passport) {
     app.get('/login', function(req, res) {
         //logic if user redirect to index makes sure they dont see login again
         // render the page and pass in any flash data if it exists
-        res.render('login', { user : req.user });
+        res.render('login', { user : req.user, message: req.flash('loginMessage') });
     });
 
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
-            successRedirect : '/checkauth', // redirect to the secure profile section
-            failureRedirect : '/about', // redirect back to the signup page if there is an error
+            successRedirect : '/profile', // redirect to the secure profile section
+            failureRedirect : '/login', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }),
         function(req, res) {
@@ -90,12 +90,12 @@ module.exports = function(app, passport) {
     //Trying to get so that all orders for logged in user will appear on the profiles page. Havent tried to bring
     //it back yet with handlebars, im just trying to console log the data for now.
     app.get('/profile', isAuthenticated, function(req, res) {
-
         connection.query("SELECT * FROM orders WHERE username = ?",[req.user.username], function(err, data) {
             console.log(err);
             if (err) {
                 return res.status(500).end();
             }
+
             console.log(data.RowDataPacket);
             res.render("profile", { orders : data, user: req.user });
         });

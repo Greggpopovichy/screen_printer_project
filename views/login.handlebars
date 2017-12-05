@@ -2,20 +2,24 @@
     <div class= "nav-wrapper">
         <a href="/about" class="brand-logo center black-text">Chuck's Tees</a>
         <ul id="nav-mobile" class="center-align">
-            <li><a href="/signup" class="navSignup">Sign Up</a></li>
             <li><a href="/about" class="navAbout">Home</a></li>
+            <li><a href="/signup" class="navSignup">Sign Up</a></li>
+
         </ul>
     </div>
 </nav>
 
 <div class="login-image z-depth-5">
     <div class="row valign-wrapper">
-    <div class="card center-align col l8 offset-l2" id="loginCard">
+    <div class="card center-align col l8 offset-l2 z-depth-4" id="loginCard">
         <form id ="loginForm" method="post" action="/login" class="">
             <div class="form-group black-text" id="userNameInput">
                 <i class="material-icons tiny" id="usernameIcon">account_circle</i>
                 <label class="black-text" id="userNameInputLabel">User Name </label>
                 <input class="form-control validate black-text" id="username-input"  name ="username" type="text" required>
+                {{#if message}}
+                    <div class="alert alert-danger">{{message}}</div>
+                {{/if}}
             </div>
             <div class="form-group black-text" id="passwordInput">
                 <i class="material-icons tiny" id="passwordIcon">lock_outline</i>
@@ -26,7 +30,7 @@
                 <button class="btn waves-effect waves-light red" id="loginButton" type="submit" name="action">Login</button>
             </div>
             <div class="form-group black-text" id="noAccount">
-                <strong>Don't have an account? Sign up </strong><a class="links" id="registerAccount" href="/signup"> here</a> or <a href="/logout" id="logoutButton"> logout</a>.
+                <strong>Don't have an account? Sign up </strong><a class="links" id="registerAccount" href="/signup"> here</a>
             </div>
         </form>
         </div>

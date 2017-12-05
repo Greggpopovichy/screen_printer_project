@@ -1,7 +1,6 @@
-body{
-    font-family: 'Roboto Slab', serif;
+body {
+    font-family: 'Inconsolata', monospace;
 }
-
 .test {
     text-align:center;
     margin-bottom:10px;
@@ -21,7 +20,7 @@ body{
     margin-bottom:10px;
 }
 
- /*Background and text color when a tab is active*/
+/*Background and text color when a tab is active*/
 
 a.brand-logo{
     font-size: 62px;
@@ -123,8 +122,8 @@ nav{
 }
 
 /*.pickQuantity {*/
-    /*display: inline;*/
-    /*margin-left: 25%;*/
+/*display: inline;*/
+/*margin-left: 25%;*/
 /*}*/
 #quantity{
     width:25%;
@@ -181,12 +180,11 @@ nav{
 }
 
 #loginCard{
-
     padding-top:25px;
     text-align: center;
 }
 
-.row .col{
+.valign-wrapper .form-group{
     float: none;
 }
 
@@ -263,12 +261,10 @@ p.center-align{
 
 
 #loginCard{
-    margin-top:0px;
+    margin-top:30px;
 }
 
-.row .col{
-    float: none;
-}
+
 
 #loginButtonRow{
     margin-bottom:0px;
@@ -277,5 +273,33 @@ p.center-align{
 #signupSubmit{
     background-color:red;
     color: white;
+    margin-bottom:15px;
 }
 
+.btn-number{
+    width:20%;
+}
+
+#fName-input{
+    width:70%;
+}
+
+#lName-input{
+    width:70%;
+}
+
+#number-input{
+    width:70%;
+}
+
+#email-input{
+    width:70%;
+}
+
+#usernameinput{
+    width:70%;
+}
+
+#passwordinput{
+    width:70%;
+}

@@ -4,35 +4,47 @@
         <ul id="nav-mobile" class="center-align">
             <li><a href="/about" class="navAbout">Home</a></li>
             <li><a href="/profile" class="navProfile">Profile</a></li>
-            <li><a href="/login" class="navLogin">Login</a></li>
-            <li><a href="/signup" class="navSignup">Sign Up</a></li>
+            <li><a href="/placeorder" class="navLogin">Place Order</a></li>
+            <li><a href="/logout" class="navSignup">Logout</a></li>
         </ul>
     </div>
 </nav>
 
 
-<div class ="row">
-    <p> Hello {{ user.user_first_name }}, create your order below. Don't worry about the exact details of the shirt just yet, once we
-        receive your order we will contact you to get your desired layout for the front and back of the shirt. We can create the full design
-        for you, but if you have a design of your own that you would like to use, feel free to upload it!</p>
-</div>
-<div class ="container grey darken-2" id ="registerForm">
+
+<!--<div class ="row">-->
+    <!--<p> Hello {{ user.user_first_name }}, create your order below. Don't worry about the exact details of the shirt just yet, once we-->
+        <!--receive your order we will contact you to get your desired layout for the front and back of the shirt. We can create the full design-->
+        <!--for you, but if you have a design of your own that you would like to use, feel free to upload it!</p>-->
+<!--</div>-->
+<div class ="container white z-depth-4" id ="placeOrderForm">
     <div class="row">
         <div class = "col s6 place-image">
             <div class="placeholderColorImage"></div>
         </div>
         <div class="col s6 ">
-            <form id ="form">
+            <form id ="form ">
                 <h4 class="center-align grey-text darken-2-text">Place Order</h4>
+                <a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">info</i></a>
+
+                <!-- Tap Target Structure -->
+                <div class="tap-target" data-activates="menu">
+                    <div class="tap-target-content">
+                        <h5>Title</h5>
+                        <p>A bunch of text</p>
+                    </div>
+                </div>
+
+
                 <div class ="row">
                     <div class="col s3">
                     </div>
                     <div class="center col s6">
-                        <select class="browser-default size">
-                            <option value="" disabled selected>Size</option>
-                            <option value="small">small</option>
-                            <option value="medium">medium</option>
-                            <option value="large">large</option>
+                        <select class="browser-default size grey lighten-1">
+                            <option class =" grey lighten-1" value="" disabled selected>Size</option>
+                            <option class =" grey lighten-1" value="small">small</option>
+                            <option class =" grey lighten-1" value="medium">medium</option>
+                            <option class =" grey lighten-1" value="large">large</option>
                         </select>
                     </div>
                 </div>
@@ -40,11 +52,11 @@
                     <div class="col s3">
                     </div>
                     <div class="center col s6">
-                        <select class="browser-default shirt_type">
-                            <option value="" disabled selected>Type of Shirt</option>
-                            <option value="short">Short-Sleeve T-shirt</option>
-                            <option value="long">Long-Sleeve T-Shirt</option>
-                            <option value="hoodie">Hoodie</option>
+                        <select class="browser-default shirt_type grey lighten-1">
+                            <option class =" grey lighten-1" value="" disabled selected>Type of Shirt</option>
+                            <option class =" grey lighten-1" value="short">Short-Sleeve T-shirt</option>
+                            <option class =" grey lighten-1" value="long">Long-Sleeve T-Shirt</option>
+                            <option class =" grey lighten-1" value="hoodie">Hoodie</option>
                         </select>
                     </div>
                 </div>
@@ -59,7 +71,6 @@
                         <div class="colorBox green" color="green" data-short="https://i.ebayimg.com/images/g/2MoAAOxyUI1TH3TE/s-l300.jpg" data-long="https://www.entripy.com/content/images/thumbs/0023113_jerzees-hidensi-t-long-sleeve-t-shirt.jpeg" data-hoodie="https://s3-eu-west-1.amazonaws.com/images.linnlive.com/4026ef0cc7c4844b9d335306aa30fe5c/6745cb2b-5b01-44cc-8c1c-d2e1764920a5.jpg"></div>
                         <div class="colorBox black" color="black" data-short=https://gd.image-gmkt.com/SGP-SALE-CHEAP-PLAIN-MAN-TSHIRT-MAN-SHIRT-BLACK-TEE-SHIRT-MEN/li/558/823/606823558.g_400-w_g.jpg" data-long="https://www.sunspel.com/media/catalog/product/cache/4/small_image/500x/9df78eab33525d08d6e5fb8d27136e95/m/t/mtsh5013-bkaa.jpg" data-hoodie="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=73405156"></div>
                         <div class="colorBox yellow" color="yellow" data-short="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=8264785" data-long="https://i5.walmartimages.com/asr/41cac9c0-f014-44d0-8549-2952bacb40ed_1.caef78b848d9becab4e330ab93c44a6c.jpeg" data-hoodie="https://s3-eu-west-1.amazonaws.com/megaimage/mega-lutbc1072-20.jpg"></div>
-
                     </div>
                 </div>
                 <div class ="row">
@@ -67,14 +78,14 @@
                     </div>
                     <div class="input-group col s6 pickQuantity">
                                     <span class="input-group-btn">
-                                        <button type="button" class="center blue darken-2 quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                                        <button type="button" class="center red quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
                                           <i class="material-icons">remove</i>
                                         </button>
                                     </span>
                         <input type="text" id="quantity" name="quantity" class="input-number center" value="1" >
                         <span class="input-group-btn">
-                                        <button type="button" class="center blue darken-2 quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
-                                         <i class="material-icons">add</i>
+                                        <button type="button" class="center red quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                         <i class="material-icons center">add</i>
                                         </button>
                                     </span>
                     </div>
@@ -103,10 +114,10 @@
                 </div>
             </form>
         </div>
-        <div class="redirect">
-            <p><a href="/logout">Logout</a></p>
-        </div>
-</div>
+
+
+
+    </div>
 </div>
 
 <script>

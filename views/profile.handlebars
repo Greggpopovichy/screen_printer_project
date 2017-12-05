@@ -36,17 +36,21 @@
                     <strong>Phone Number</strong>: {{ user.user_number }}<br>
                     <strong>Email</strong>: {{ user.user_email }}<br>        </div>
                 <div class="card-tabs">
-                    <ul class="tabs tabs-fixed-width">
+                    <ul class="tabs tabs-fixed-width insertTabs">
 
-                        <li class="tab red-text"><a class="active red-text" href="#test5">Test 1</a></li>
-                        <li class="tab red-text"><a class="active red-text" href="#test5">Test 2</a></li>
-                        <li class="tab red-text"><a href="#test6 red-text">Test 3</a></li>
                     </ul>
                 </div>
-                <div class="card-content grey lighten-4">
-                    <div class = "red-text" id="test4">Test 1</div>
-                    <div class = "red-text" id="test5">Test 2</div>
-                    <div class = "red-text" id="test6">Test 3</div>
+                <div class="card-content grey lighten-4 myParentDiv">
+
+                        {{#each orders}}
+                            <div class = "red-text">
+                                    username:{{this.username}}
+                                    quantity: {{this.quantity}}
+                                    price: {{this.price}}
+                            </div>
+                        {{/each}}
+
+
                 </div>
             </div>
 
@@ -55,5 +59,18 @@
 
 </div>
 <script>
+var numOrders = "{{orders.length}}";
+
+for (i=0;i<numOrders;i++){
+
+    $(".insertTabs").append('<li class="tab red-text"><a class="red-text" href="#test' + (i+1) +'">Order ' + (i+1) +'</a></li>')
+
+
+}
+$('div[class="myParentDiv"]').each(function(index,item){
+  var i = 1
+        $(item).attr("id", "test" + i);
+    i++;
+});
 
 </script>

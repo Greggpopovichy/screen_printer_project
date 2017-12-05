@@ -1,5 +1,5 @@
-<nav class = "white">
-    <div class ="nav-wrapper">
+<nav class="white">
+    <div class= "nav-wrapper">
         <a href="/about" class="brand-logo center black-text">Chuck's Tees</a>
         <ul id="nav-mobile" class="center-align">
             <li><a href="/about" class="navAbout">Home</a></li>
@@ -9,51 +9,35 @@
         </ul>
     </div>
 </nav>
-<!--<div class="container">-->
-    <!--<div class="row col s12">-->
-            <!--<div class="card z-depth-4" id="profileCard">-->
-                <!--<div class="card-content white-text red center-align">-->
-                    <!--<span class="card-title">Welcome {{ user.user_first_name }}, checkout your information below! Not {{ user.user_first_name }}? Logout <a href="/logout" id="logoutButton"> here</a>.</span>-->
-                    <!--<p>-->
-                        <!--<strong>Username</strong>: {{user.username }}<br>-->
-                        <!--<strong>First Name</strong>: {{ user.user_first_name }}<br>-->
-                        <!--<strong>Last Name</strong>: {{ user.user_last_name }}<br>-->
-                        <!--<strong>Phone Number</strong>: {{ user.user_number }}<br>-->
-                        <!--<strong>Email</strong>: {{ user.user_email }}<br>-->
-                <!--</div>-->
-            <!--</div>-->
-    <!--</div>-->
-<!--</div>-->\
 
-    <div class="login-image z-depth-5">
-        <div class="container">
-            <div class="card">
-                <div class="card-content">
-                    <h3 class="center"> Profile </h3>
-                    <strong>Username</strong>: {{user.username }}<br>
-                    <strong>First Name</strong>: {{ user.user_first_name }}<br>
-                    <strong>Last Name</strong>: {{ user.user_last_name }}<br>
-                    <strong>Phone Number</strong>: {{ user.user_number }}<br>
-                    <strong>Email</strong>: {{ user.user_email }}<br>        </div>
-                <div class="card-tabs">
-                    <ul class="tabs tabs-fixed-width">
-
-                        <li class="tab red-text"><a class="active red-text" href="#test5">Test 1</a></li>
-                        <li class="tab red-text"><a class="active red-text" href="#test5">Test 2</a></li>
-                        <li class="tab red-text"><a href="#test6 red-text">Test 3</a></li>
-                    </ul>
-                </div>
-                <div class="card-content grey lighten-4">
-                    <div class = "red-text" id="test4">Test 1</div>
-                    <div class = "red-text" id="test5">Test 2</div>
-                    <div class = "red-text" id="test6">Test 3</div>
-                </div>
+<div class="login-image z-depth-5">
+        <div class="container center" id="profileContainer">
+        <div class=“card”>
+            <div class="center">
+                <h3 class="center red-text" id="orderCard">User Profile</h3>
+                <strong>Username</strong>: {{user.username }}<br>
+                <strong>First Name</strong>: {{ user.user_first_name }}<br>
+                <strong>Last Name</strong>: {{ user.user_last_name }}<br>
+                <strong>Phone Number</strong>: {{ user.user_number }}<br>
+                <strong>Email</strong>: {{ user.user_email }}<br>
             </div>
-
+            <div class="center">
+                <h3 class =“center”>Order History</h3>
+            </div>
         </div>
+            {{#each orders}}
+                <div class="card center z-depth-4" id="orderCard" style="width:50%">
+                        <div class=“center”>
+                            <strong>Size: </strong>{{this.size }}<br>
+                            <strong>Type of Shirt: </strong> {{ this.shirt_type }}<br>
+                            <strong>Color: </strong> {{this.color}}<br>
+                            <strong>Quantity: </strong>{{this.quantity}}<br>
+                            <strong>Price: </strong> {{this.price}}<br>
+                        </div>
+                    </div>
+            {{/each}}
+
     </div>
-
 </div>
-<script>
 
-</script>
+

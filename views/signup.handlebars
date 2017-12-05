@@ -9,52 +9,50 @@
     </div>
 </nav>
 
-<div class="container">
-        <h4 class="center-align black-text">Sign Up</h4>
-
+<div class="login-image z-depth-5">
         <div class="row valign-wrapper">
-            <div class="card z-depth-4 center-align col l8 offset-l2" id="loginCard">
-
-                <form action="/signup" method="post">
-                    <div class="form-group col s16" id="firstName">
-                        <label for="fName-input">First Name </label>
-                        <input class="form-control" id="fName-input" name="user_first_name" class = "validate" type="text" required>
-                    </div>
-
-                    <div class="form-group col s16" id="lastName">
-                        <label>Last Name </label>
-                        <input class="form-control" id="lName-input" name="user_last_name" class = "validate" type="text" required>
-                    </div>
-
-                    <div class="form-group col s16" id="number">
-                        <label>Number </label>
-                        <input class="form-control" id="number-input" class = "validate" name="user_number" type="number" required>
-                    </div>
-
-                    <div class="form-group col s16" id="email">
-                        <label>Email </label>
-                        <input class="form-control" id="email-input" class = "validate" name="user_email" type="email" required>
-                    </div>
-
-                    <div class="form-group col s16">
-                        <label>Username</label>
-                        <input type="text" class="form-control" name="username" required>
-                    </div>
-                    <div class="form-group col s16">
-                        <label>Password</label>
-                        <input type="password" class="form-control" name="password" required>
-                    </div>
-                    <button type="submit" class="btn waves-effect waves-light red" id="signupSubmit">Signup</button>
-                </form>
+            <div class="card center-align col l8 offset-l2 z-depth-4" id="loginCard">
+                <h4 class="center-align black-text">Sign Up</h4>
+        <form action="/signup" method="post">
+            <div class="form-group" id="firstName">
+                <label for="fName-input">First Name </label>
+                <input class="form-control" id="fName-input" name="user_first_name" class = "validate" type="text" required>
             </div>
+
+            <div class="form-group" id="lastName">
+                <label>Last Name </label>
+                <input class="form-control" id="lName-input" name="user_last_name" class = "validate" type="text" required>
+            </div>
+
+            <div class="form-group" id="number">
+                <label>Number </label>
+                <input class="form-control" id="number-input" class = "validate" name="user_number" type="number">
+            </div>
+
+            <div class="form-group" id="email">
+                <label>Email </label>
+                <input class="form-control" id="email-input" class = "validate" name="user_email" type="email" required>
+            </div>
+
+            <div class="form-group" id="username">
+                <label>Username</label>
+                <input type="text" class="form-control" id="usernameinput" name="username" required>
+                {{#if message}}
+                    <div class="alert alert-danger">{{message}}</div>
+                {{/if}}
+            </div>
+            <div class="form-group" id="password">
+                <label>Password</label>
+                <input type="password" class="form-control" id="passwordinput" name="password" required>
+                <!--</form>-->
+            </div>
+
+            <button type="submit" class="btn waves-effect waves-light red" id="signupSubmit">Signup</button>
+
+            <div class="form-group black-text" id="noAccount">
+                <strong>Don't have an account? Sign up </strong><a class="links" id="registerAccount" href="/signup"> here</a>
+            </div>
+        </form>
     </div>
 </div>
-
-        {{#if message}}
-        <div class="alert alert-danger">{{message}}</div>
-        {{/if}}
-
-    <footer class="row col s12">
-        <p>Already have an account? <a href="/login">Login</a></p>
-    </footer>
 </div>

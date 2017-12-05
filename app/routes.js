@@ -48,13 +48,13 @@ module.exports = function(app, passport) {
     app.get('/login', function(req, res) {
         //logic if user redirect to index makes sure they dont see login again
         // render the page and pass in any flash data if it exists
-        res.render('login', { user : req.user });
+        res.render('login', { user : req.user, message: req.flash('loginMessage') });
     });
 
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
             successRedirect : '/profile', // redirect to the secure profile section
-            failureRedirect : '/about', // redirect back to the signup page if there is an error
+            failureRedirect : '/login', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }),
         function(req, res) {

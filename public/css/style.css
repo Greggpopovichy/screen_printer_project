@@ -180,7 +180,6 @@ nav{
 }
 
 #loginCard{
-
     padding-top:25px;
     text-align: center;
 }
@@ -278,6 +277,37 @@ p.center-align{
 }
 
 
-#placeOrderForm{
-    margin-top:25px;
+
+#placeOrderForm {
+    margin-top: 25px;
+}
+/*.btn-number{*/
+    /*width:20%;*/
+/*}*/
+
+#fName-input{
+    width:70%;
+}
+
+#lName-input{
+    width:70%;
+}
+
+#number-input{
+    width:70%;
+}
+
+#email-input{
+    width:70%;
+}
+
+#usernameinput{
+    width:70%;
+}
+
+#passwordinput{
+    width:70%;
+}
+.checkCircle{
+    margin-top:35px;
 }

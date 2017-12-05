@@ -273,7 +273,6 @@ p.center-align{
 }
 
 #placeOrderForm {
-    margin-top: 25px;
 }
 /*.btn-number{*/
     /*width:20%;*/
@@ -312,6 +311,7 @@ p.center-align{
 
 #placeOrder{
     text-shadow: 1px 1px 0px white;
+    width:auto;
 }
 
 .checkCircle{
@@ -320,4 +320,9 @@ p.center-align{
 
 #plusMinus{
     padding:0px;
+}
+
+#placeOrderContainer{
+    background-color: rgba(255,255,255, 0.9);
+    border-radius:15px;
 }

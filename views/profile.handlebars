@@ -35,19 +35,23 @@
                     <strong>Last Name</strong>: {{ user.user_last_name }}<br>
                     <strong>Phone Number</strong>: {{ user.user_number }}<br>
                     <strong>Email</strong>: {{ user.user_email }}<br>        </div>
-                <div class="card-tabs">
-                    <ul class="tabs tabs-fixed-width insertTabs">
-
-                    </ul>
-                </div>
-                <div class="card-content grey lighten-4 myParentDiv">
-
+                 </div>
+            </div>
+        </div>
+            <h3 class ="center"> View Orders</h3>
                         {{#each orders}}
-                            <div class = "red-text">
-                                    username:{{this.username}}
-                                    quantity: {{this.quantity}}
-                                    price: {{this.price}}
-                            </div>
+                            <div class="container z-depth-4">
+                                <div class="card">
+                                    <div class="card-content">
+                                        <h3 class="center">  </h3>
+                                        <strong>Size: </strong>{{this.size }}<br>
+                                        <strong>Type of Shirt: </strong> {{ this.shirt_type }}<br>
+                                        <strong>Color: </strong> {{this.color}}<br>
+                                        <strong>Quantity: </strong>{{this.quantity}}<br>
+                                        <strong>Price: </strong> {{this.price}}<br>
+                                    </div>
+                                </div>
+                             </div>
                         {{/each}}
 
 
@@ -59,18 +63,6 @@
 
 </div>
 <script>
-var numOrders = "{{orders.length}}";
 
-for (i=0;i<numOrders;i++){
-
-    $(".insertTabs").append('<li class="tab red-text"><a class="red-text" href="#test' + (i+1) +'">Order ' + (i+1) +'</a></li>')
-
-
-}
-$('div[class="myParentDiv"]').each(function(index,item){
-  var i = 1
-        $(item).attr("id", "test" + i);
-    i++;
-});
 
 </script>

@@ -323,5 +323,6 @@ p.center-align{
 }
 
 #placeOrderContainer{
-    opacity: .9;
+    background-color: rgba(255,255,255, 0.9);
+    border-radius:15px;
 }

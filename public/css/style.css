@@ -87,8 +87,8 @@ nav ul li:hover {
 }
 
 .colorBox {
-    align-items: center;
-    align-content: center;
+    /*align-items: center;*/
+    /*align-content: center;*/
     display:inline-block;
     width: 20px;
     height: 20px;
@@ -126,7 +126,7 @@ nav{
 /*margin-left: 25%;*/
 /*}*/
 #quantity{
-    width:25%;
+    width:20%;
 }
 
 
@@ -277,6 +277,7 @@ p.center-align{
     margin-bottom:15px;
 }
 
-.btn-number{
-    width:20%;
+
+#placeOrderForm{
+    margin-top:25px;
 }

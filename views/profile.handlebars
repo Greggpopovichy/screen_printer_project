@@ -13,7 +13,7 @@
 
 <div class="container">
     <div class="row col s12">
-            <div class="card" id="profileCard">
+            <div class="card z-depth-4" id="profileCard">
                 <div class="card-content white-text red center-align">
                     <span class="card-title">Welcome {{ user.user_first_name }}, checkout your information below! Not {{ user.user_first_name }}? Logout <a href="/logout" id="logoutButton"> here</a>.</span>
                     <p>
@@ -27,19 +27,32 @@
     </div>
 </div>
 <div>
-<h3> View Orders</h3>
+<h3 class="center"> View Orders</h3>
 
-    <ul>
+
         {{#each orders}}
-            <li>
-                <p>
-                    username:{{this.username}}
-                    quantity: {{this.quantity}}
-                    price: {{this.price}}
-                </p>
-            </li>
+
+
+            <div class="container">
+                <div class="row col s12">
+                    <div class="card z-depth-4" id="profileCard">
+                        <div class = "col s3">
+                            <i class="material-icons large">check_circle</i>
+                        </div>
+                        <div class="card-content">
+                                Shirts: {{this.shirt_type}}<br>
+                                Size: {{this.shirt_type}}<br>
+                                Size: {{this.shirt_type}}<br>
+                                Quantity: {{this.quantity}}<br>
+                                Total Price: {{this.price}}<br>
+                                Notes: {{this.notes}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         {{/each}}
-    </ul>
+
 
 </div>
 

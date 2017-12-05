@@ -13,9 +13,9 @@
 
 
 <!--<div class ="row">-->
-    <!--<p> Hello {{ user.user_first_name }}, create your order below. Don't worry about the exact details of the shirt just yet, once we-->
-        <!--receive your order we will contact you to get your desired layout for the front and back of the shirt. We can create the full design-->
-        <!--for you, but if you have a design of your own that you would like to use, feel free to upload it!</p>-->
+<!--<p> Hello {{ user.user_first_name }}, create your order below. Don't worry about the exact details of the shirt just yet, once we-->
+<!--receive your order we will contact you to get your desired layout for the front and back of the shirt. We can create the full design-->
+<!--for you, but if you have a design of your own that you would like to use, feel free to upload it!</p>-->
 <!--</div>-->
 <div class ="container white z-depth-4" id ="placeOrderForm">
     <div class="row">
@@ -25,15 +25,15 @@
         <div class="col s6 ">
             <form id ="form ">
                 <h4 class="center-align grey-text darken-2-text">Place Order</h4>
-                <a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">info</i></a>
+                <!--<a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">info</i></a>-->
 
-                <!-- Tap Target Structure -->
-                <div class="tap-target" data-activates="menu">
-                    <div class="tap-target-content">
-                        <h5>Title</h5>
-                        <p>A bunch of text</p>
-                    </div>
-                </div>
+                <!--&lt;!&ndash; Tap Target Structure &ndash;&gt;-->
+                <!--<div class="tap-target" data-activates="menu">-->
+                    <!--<div class="tap-target-content">-->
+                        <!--<h5>Title</h5>-->
+                        <!--<p>A bunch of text</p>-->
+                    <!--</div>-->
+                <!--</div>-->
 
 
                 <div class ="row">
@@ -101,51 +101,40 @@
                     <div class="col s3">
                     </div>
                     <div class ="center col s6">
-                        <p id ="addPrice">Price: </p>
+                        <p  class ="center" id ="addPrice">Price: </p>
                     </div>
                 </div>
                 <div class ="row">
                     <div class="col s3">
                     </div>
                     <div class="col s6 center-align center section">
-                        <button class="btn waves-effect waves-light blue darken-2" id="placeorder" type="submit" name="action">Place Order
+                        <button class="btn waves-effect waves-light red" id="placeorder" type="submit" name="action">Place Order
                         </button>
                     </div>
                 </div>
             </form>
         </div>
-
-
-
     </div>
 </div>
-
 <script>
     var price;
-
-//    var quantitiy=0;
+    //    var quantitiy=0;
     $('.quantity-right-plus').click(function(e){
-
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
         var quantity = parseInt($('#quantity').val());
-
         // If is not undefined
-
         $('#quantity').val(quantity + 1);
         $('#addPrice').empty()
-
-
         $('#addPrice').empty()
         var q =  $('#quantity').val()
         var shortp= 12;
         var longp = 15;
         var hoodiep = 18;
-
-       if($(".shirt_type").val() === "short"){
-           price = shortp * q
-       }
+        if($(".shirt_type").val() === "short"){
+            price = shortp * q
+        }
         if($(".shirt_type").val() === "long"){
             price = longp * q
         }
@@ -153,29 +142,21 @@
             price = hoodiep * q
         }
         $('#addPrice').append("Price: " + price)
-
-
-
     });
-
     $('.quantity-left-minus').click(function(e){
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
         var quantity = parseInt($('#quantity').val());
-
         // If is not undefined
-
         // Increment
         if(quantity>1){
             $('#quantity').val(quantity - 1);
-
             $('#addPrice').empty()
             var q =  $('#quantity').val()
             var shortp= 12;
             var longp = 15;
             var hoodiep = 18;
-
             if($(".shirt_type").val() === "short"){
                 price = shortp * q
             }
@@ -186,57 +167,37 @@
                 price = hoodiep * q
             }
             $('#addPrice').append("Price: " + price)
-
         }
-
-
     });
-
-var color;
-
+    var color;
     $('.colorBox').on('mouseover', function() {
         event.preventDefault();
-
         var setShirt = "data-short";
         var defineShirt = $(".shirt_type").val()
         color = $(this).attr("color");
-
         $('.place-image').empty();
-
-
         if (defineShirt ==="long"){
             setShirt = "data-long"
         }
         if(defineShirt ==="hoodie"){
             setShirt = "data-hoodie"
         }
-
         console.log("shirt type= " + defineShirt)
         var imageLink  =$(this).attr(setShirt);
         console.log(imageLink);
-
         var addImage = '<img class = "colorImage" src="' + imageLink + '">';
         console.log(addImage);
-
         $('.place-image').append(addImage);
-
-
-
-
-
     })
-
     $('.shirt_type').change(function() {
-
         $('#addPrice').empty()
         var q = $("#quantity").val()
         var shortp= 12;
         var longp = 15;
         var hoodiep = 18;
-
-       if($(this).val() === "short"){
-           price = shortp * q
-       }
+        if($(this).val() === "short"){
+            price = shortp * q
+        }
         if($(this).val() === "long"){
             price = longp * q
         }
@@ -244,36 +205,28 @@ var color;
             price = hoodiep * q
         }
         $('#addPrice').append("Price: " + price)
-
     })
-
-        $('#placeorder').click(function() {
-
-            console.log("size " + $(".size").val())
-            console.log("color " + color)
-            console.log("quantity " + $("#quantity").val())
-            console.log("shirt  " + $(".shirt_type").val())
-            console.log("notes " + $("#notes").val())
-
-            var size = $(".size").val();
-            var quantity = $("#quantity").val()
-            var shirtType = $(".shirt_type").val()
-            var notes = $("#notes").val()
-
-
-            var newUserOrder = {
-                username: "{{user.username}}",
-                size: size,
-                price: price,
-                shirt_type: shirtType,
-                color: color,
-                quantity: quantity,
-                notes: notes
-            };
-
-            console.log(newUserOrder);
-
-            // Send the POST request.
+    $('#placeorder').click(function() {
+        console.log("size " + $(".size").val())
+        console.log("color " + color)
+        console.log("quantity " + $("#quantity").val())
+        console.log("shirt  " + $(".shirt_type").val())
+        console.log("notes " + $("#notes").val())
+        var size = $(".size").val();
+        var quantity = $("#quantity").val()
+        var shirtType = $(".shirt_type").val()
+        var notes = $("#notes").val()
+        var newUserOrder = {
+            username: "{{user.username}}",
+            size: size,
+            price: price,
+            shirt_type: shirtType,
+            color: color,
+            quantity: quantity,
+            notes: notes
+        };
+        console.log(newUserOrder);
+        // Send the POST request.
 //        $.ajax("/newOrder", {
 //            type: "POST",
 //            data: newUserOrder
@@ -285,16 +238,14 @@ var color;
 //                }
 //        );
 //         Send the POST request.
-            $.ajax("/newOrder", {
-                type: "POST",
-                data: newUserOrder
-            }).then(function () {
-                //this should log to browser console to let us know that the database has been updated
-                console.log("created new order");
-                // Reload the page to get the updated list
-                location.reload();
-            })
+        $.ajax("/newOrder", {
+            type: "POST",
+            data: newUserOrder
+        }).then(function () {
+            //this should log to browser console to let us know that the database has been updated
+            console.log("created new order");
+            // Reload the page to get the updated list
+            location.reload();
         })
-
+    })
 </script>
-

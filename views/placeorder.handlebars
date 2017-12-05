@@ -9,24 +9,20 @@
         </ul>
     </div>
 </nav>
-
-
-
 <!--<div class ="row">-->
     <!--<p> Hello {{ user.user_first_name }}, create your order below. Don't worry about the exact details of the shirt just yet, once we-->
         <!--receive your order we will contact you to get your desired layout for the front and back of the shirt. We can create the full design-->
         <!--for you, but if you have a design of your own that you would like to use, feel free to upload it!</p>-->
 <!--</div>-->
-<div class ="container white z-depth-4" id ="placeOrderForm">
+<div class ="login-image z-depth-5" id ="placeOrderForm">
     <div class="row">
-        <div class = "col s6 place-image">
+        <div class = "col s6 place-image center-align">
             <div class="placeholderColorImage"></div>
         </div>
-        <div class="col s6 ">
+        <div class="col s6">
             <form id ="form ">
-                <h4 class="center-align grey-text darken-2-text">Place Order</h4>
-                <a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">info</i></a>
-
+                <h2 class="center-align red-text" id="placeOrder">Place Order</h2>
+                <!--<a id="menu" class="waves-effect waves-light btn btn-floating" ><i class="material-icons">info</i></a>-->
                 <!-- Tap Target Structure -->
                 <div class="tap-target" data-activates="menu">
                     <div class="tap-target-content">
@@ -36,11 +32,11 @@
                 </div>
 
 
-                <div class ="row">
+                <div class ="row center">
                     <div class="col s3">
                     </div>
                     <div class="center col s6">
-                        <select class="browser-default size grey lighten-1">
+                        <select class="browser-default size white lighten-1">
                             <option class =" grey lighten-1" value="" disabled selected>Size</option>
                             <option class =" grey lighten-1" value="small">small</option>
                             <option class =" grey lighten-1" value="medium">medium</option>
@@ -48,11 +44,11 @@
                         </select>
                     </div>
                 </div>
-                <div class ="row">
+                <div class ="row center">
                     <div class="col s3">
                     </div>
                     <div class="center col s6">
-                        <select class="browser-default shirt_type grey lighten-1">
+                        <select class="browser-default shirt_type white lighten-1">
                             <option class =" grey lighten-1" value="" disabled selected>Type of Shirt</option>
                             <option class =" grey lighten-1" value="short">Short-Sleeve T-shirt</option>
                             <option class =" grey lighten-1" value="long">Long-Sleeve T-Shirt</option>
@@ -61,7 +57,7 @@
                     </div>
                 </div>
 
-                <div class ="row">
+                <div class ="row center">
                     <div class="col s3">
                     </div>
                     <div class="center col s6">
@@ -73,7 +69,7 @@
                         <div class="colorBox yellow" color="yellow" data-short="https://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=8264785" data-long="https://i5.walmartimages.com/asr/41cac9c0-f014-44d0-8549-2952bacb40ed_1.caef78b848d9becab4e330ab93c44a6c.jpeg" data-hoodie="https://s3-eu-west-1.amazonaws.com/megaimage/mega-lutbc1072-20.jpg"></div>
                     </div>
                 </div>
-                <div class ="row">
+                <div class ="row center">
                     <div class="col s3">
                     </div>
                     <div class="input-group col s6 pickQuantity">
@@ -90,25 +86,25 @@
                                     </span>
                     </div>
                 </div>
-                <div class ="row">
+                <div class ="row center">
                     <div class="col s3">
                     </div>
                     <div class ="center col s6">
                         <textarea id="notes" class ="grey lighten-4" name="notes" placeholder="Tell us about your design" ></textarea>
                     </div>
                 </div>
-                <div class ="row">
+                <div class ="row center">
                     <div class="col s3">
                     </div>
                     <div class ="center col s6">
-                        <p id ="addPrice">Price: </p>
+                        <p id ="addPrice" class="center red-text"><strong>Price:</strong></p>
                     </div>
                 </div>
-                <div class ="row">
+                <div class ="row center">
                     <div class="col s3">
                     </div>
                     <div class="col s6 center-align center section">
-                        <button class="btn waves-effect waves-light blue darken-2" id="placeorder" type="submit" name="action">Place Order
+                        <button class="btn waves-effect waves-light red" id="placeorder" type="submit" name="action">Place Order
                         </button>
                     </div>
                 </div>

@@ -129,14 +129,6 @@ nav{
     width:25%;
 }
 
-
-.iris {
-    background-image: url("http://1.bp.blogspot.com/-SYNmi5QKsFs/UrR9KPsUQJI/AAAAAAAAD6M/iW0aYcSjo0E/s1600/IMG_6993.JPG");
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-size: cover;
-}
-
 .login-image{
     background-image: url("https://i.pinimg.com/originals/75/c6/1b/75c61bc2227f121a4e39f3b753a1446c.jpg");
     background-repeat: no-repeat;
@@ -277,7 +269,7 @@ p.center-align{
 }
 
 .btn-number{
-    width:20%;
+
 }
 
 #fName-input{
@@ -303,3 +295,15 @@ p.center-align{
 #passwordinput{
     width:70%;
 }
+
+#addPrice{
+    color:red;
+    font-size: x-large;
+    text-shadow: 1px 1px 0px white;
+
+}
+
+#placeOrder{
+    text-shadow: 1px 1px 0px white;
+}
+

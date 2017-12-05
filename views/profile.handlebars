@@ -9,38 +9,50 @@
         </ul>
     </div>
 </nav>
+<!--<div class="container">-->
+    <!--<div class="row col s12">-->
+            <!--<div class="card z-depth-4" id="profileCard">-->
+                <!--<div class="card-content white-text red center-align">-->
+                    <!--<span class="card-title">Welcome {{ user.user_first_name }}, checkout your information below! Not {{ user.user_first_name }}? Logout <a href="/logout" id="logoutButton"> here</a>.</span>-->
+                    <!--<p>-->
+                        <!--<strong>Username</strong>: {{user.username }}<br>-->
+                        <!--<strong>First Name</strong>: {{ user.user_first_name }}<br>-->
+                        <!--<strong>Last Name</strong>: {{ user.user_last_name }}<br>-->
+                        <!--<strong>Phone Number</strong>: {{ user.user_number }}<br>-->
+                        <!--<strong>Email</strong>: {{ user.user_email }}<br>-->
+                <!--</div>-->
+            <!--</div>-->
+    <!--</div>-->
+<!--</div>-->\
 
+    <div class="login-image z-depth-5">
+        <div class="card">
+            <div class="card-content">
+                <h3 class="center"> Profile </h3>
+                <strong>Username</strong>: {{user.username }}<br>
+                <strong>First Name</strong>: {{ user.user_first_name }}<br>
+                <strong>Last Name</strong>: {{ user.user_last_name }}<br>
+                <strong>Phone Number</strong>: {{ user.user_number }}<br>
+                <strong>Email</strong>: {{ user.user_email }}<br>        </div>
+            <div class="card-tabs">
+                <ul class="tabs tabs-fixed-width">
 
-<div class="container">
-    <div class="row col s12">
-            <div class="card" id="profileCard">
-                <div class="card-content white-text red center-align">
-                    <span class="card-title">Welcome {{ user.user_first_name }}, checkout your information below! Not {{ user.user_first_name }}? Logout <a href="/logout" id="logoutButton"> here</a>.</span>
-                    <p>
-                        <strong>Username</strong>: {{user.username }}<br>
-                        <strong>First Name</strong>: {{ user.user_first_name }}<br>
-                        <strong>Last Name</strong>: {{ user.user_last_name }}<br>
-                        <strong>Phone Number</strong>: {{ user.user_number }}<br>
-                        <strong>Email</strong>: {{ user.user_email }}<br>
-                </div>
+                    <li class="tab red-text"><a class="active" href="#test5">Test 1</a></li>
+                    <li class="tab red-text"><a class="active" href="#test5">Test 2</a></li>
+                    <li class="tab red-text"><a hretf="#test6">Test 3</a></li>
+                </ul>
             </div>
+            <div class="card-content grey lighten-4">
+                <div class = "red" id="test4">Test 1</div>
+                <div class = "red" id="test5">Test 2</div>
+                <div class = "red" id="test6">Test 3</div>
+            </div>
+        </div>
+
+
     </div>
-</div>
-<div>
-<h3> View Orders</h3>
-
-    <ul>
-        {{#each orders}}
-            <li>
-                <p>
-                    username:{{this.username}}
-                    quantity: {{this.quantity}}
-                    price: {{this.price}}
-                </p>
-            </li>
-        {{/each}}
-    </ul>
 
 </div>
+<script>
 
-
+</script>

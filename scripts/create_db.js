@@ -19,7 +19,18 @@ CREATE TABLE IF NOT EXISTS`' + dbconfig.database + '`.`' + dbconfig.users_table 
     UNIQUE INDEX `username_UNIQUE` (`username` ASC) \
 )');
 
-connection.query()
+connection.query('\
+CREATE TABLE IF NOT EXISTS`' + dbconfig.database + '`.`' + dbconfig.orders_table + '` (\
+    `id` NOT NULL AUTO_INCREMENT, \
+    `username` VARCHAR(20), \
+    `quantity` INT, \
+    `price` INT, \
+    `shirt_type` VARCHAR(255), \
+    `color` VARCHAR(255) NOT NULL, \
+    `notes` VARCHAR(500) NOT NULL, \
+    `size` VARCHAR(100), \
+     PRIMARY KEY (id), \
+)');
 
 console.log('Success: Database Created!');
 

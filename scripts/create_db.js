@@ -19,6 +19,8 @@ CREATE TABLE IF NOT EXISTS`' + dbconfig.database + '`.`' + dbconfig.users_table 
     UNIQUE INDEX `username_UNIQUE` (`username` ASC) \
 )');
 
+connection.query()
+
 console.log('Success: Database Created!');
 
 connection.end();

@@ -56,17 +56,17 @@ module.exports = function(app, passport) {
             successRedirect : '/profile', // redirect to the secure profile section
             failureRedirect : '/login', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
-        }),
-        function(req, res) {
-            console.log("hello");
-
-            if (req.body.remember) {
-                req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; //cookie expires after 30 days
-            } else {
-                req.session.cookie.expires = false;
-            }
-            res.redirect('/about');
-        });
+        })
+        // function(req, res) {
+        //     console.log("hello");
+        //
+        //     if (req.body.remember) {
+        //         req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; //cookie expires after 30 days
+        //     } else {
+        //         req.session.cookie.expires = false;
+        //     }
+        //     res.redirect('/about');
+         );
 
     // SIGNUP
     // show the signup form

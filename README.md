@@ -6,7 +6,7 @@ Tech used in the project: \
 -Local user authentication using Passport.js \
 -Express.js \
 -MySQL \
--bcrypt for password encryption 
+-bcrypt for password encryption \
 -Polished design using the Materialize CSS framework \
 -handlebars.js for templating
 

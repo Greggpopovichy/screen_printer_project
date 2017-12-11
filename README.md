@@ -18,3 +18,6 @@ Create the database schema: node scripts/create_db.js \
 Launch: node server.js \
 Visit in your browser at: http://localhost:3000 
 
+
+![Alt text](https://user-images.githubusercontent.com/19658046/33855451-f5168c08-de92-11e7-9b5e-486fb69d0ae1.png "About Page")
+

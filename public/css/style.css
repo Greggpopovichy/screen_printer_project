@@ -20,8 +20,6 @@ body {
     margin-bottom:10px;
 }
 
-/*Background and text color when a tab is active*/
-
 a.brand-logo{
     font-size: 62px;
     color: #0d47a1;
@@ -49,15 +47,6 @@ a.brand-logo{
     background-color: red;
 }
 
-/*MASONRY SHIT*/
-
-* { box-sizing: border-box; }
-
-/* force scrollbar */
-html { overflow-y: scroll; }
-
-
-/*new nav*/
 
 ul.left li a{
     font-size: large;
@@ -65,7 +54,6 @@ ul.left li a{
     height: 72px;
 }
 
-/* NEW STUFF*/
 
 ul#nav-mobile{
     padding-top:30px;
@@ -117,10 +105,6 @@ nav{
     height: 150px;
 }
 
-/*.pickQuantity {*/
-/*display: inline;*/
-/*margin-left: 25%;*/
-/*}*/
 #quantity{
     width:20%;
 }
@@ -270,9 +254,6 @@ p.center-align{
 
 #placeOrderForm {
 }
-/*.btn-number{*/
-    /*width:20%;*/
-/*}*/
 
 #fName-input{
     width:70%;
@@ -326,10 +307,6 @@ p.center-align{
 #profileCard{
     text-shadow: 1px 1px 0px white;
     width:auto;
-}
-
-#orderCard{
-
 }
 
 #profileContainer{

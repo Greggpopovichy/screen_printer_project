@@ -9,8 +9,7 @@ var flash = require('connect-flash');
 var exphbs = require("express-handlebars");
 var morgan = require('morgan');
 var path = require('path');
-var async = require('async');
-var crypto = require('crypto');
+
 // configuration ===============================================================
 // connect to our database
 
@@ -40,6 +39,7 @@ app.use(session({
     saveUninitialized: true
 } )); // session secret
 
+//initializing passport session
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
@@ -50,4 +50,4 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 
 // launch ======================================================================
 app.listen(port);
-console.log('The magic happens on port ' + port);
+console.log('Checkout the action on port: ' + port);

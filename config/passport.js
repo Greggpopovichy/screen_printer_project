@@ -6,16 +6,16 @@ var mysql = require('mysql');
 var bcrypt = require('bcrypt-nodejs');
 var dbconfig = require('./database');
 
+//creating database connection
 var connection = mysql.createConnection(dbconfig.connection);
 connection.query('USE ' + dbconfig.database);
-// expose this function to our app using module.exports
 
+// expose this function to our app using module.exports
 module.exports = function(passport) {
 
     // passport session setup
     // required for persistent login sessions
     // passport needs ability to serialize and unserialize users out of session
-
     // used to save the user in session and terminate the users session
     passport.serializeUser(function(user, done) {
         done(null, user.id);
@@ -32,7 +32,7 @@ module.exports = function(passport) {
     // by default, if there was no name, it would just be called 'local'
 
     passport.use('local-signup', new LocalStrategy({
-                // by default, local strategy uses username and password, we will override with email
+                // by default, local strategy uses username and password
                 usernameField : 'username',
                 passwordField : 'password',
                 firstNameField: 'user_first_name',
@@ -42,7 +42,7 @@ module.exports = function(passport) {
                 passReqToCallback : true // allows us to pass back the entire request to the callback
         },
             function(req, username, password, done) {
-                // find a user whose email is the same as the forms email
+                // find a user whose username is the same as the forms username
                 // we are checking to see if the user trying to login already exists
                 connection.query("SELECT * FROM users WHERE username = ?",[username], function(err, rows) {
                     if (err)
@@ -51,7 +51,7 @@ module.exports = function(passport) {
                         return done(null, false, req.flash('signupMessage', 'That username is already taken.'));
                     } else {
                         // if there is no user with that username
-                        // create the user
+                        // create the user with encrypted password
                         var newUserMysql = {
                             username: username,
                             password: bcrypt.hashSync(password, null, null),
@@ -73,24 +73,18 @@ module.exports = function(passport) {
                         ], function(err, rows) {
                                 newUserMysql.id = rows.insertId;
                                 return done(null, newUserMysql);
-                            //if( err) return done(err);
                         });
                     }
                 });
             })
-    );
+        );
 
-    // =========================================================================
     // LOCAL LOGIN =============================================================
-    // =========================================================================
     // we are using named strategies since we have one for login and one for signup
-    // by default, if there was no name, it would just be called 'local'
-
-    //
     passport.use(
         'local-login',
         new LocalStrategy({
-                // by default, local strategy uses username and password, we will override with email
+                // by default, local strategy uses username and password
                 usernameField : 'username',
                 passwordField : 'password',
                 passReqToCallback : true // allows us to pass back the entire request to the callback

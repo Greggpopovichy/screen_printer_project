@@ -111,10 +111,9 @@
     </div>
 </div>
 <script>
+    //logic for placing order and saving to db
     var price;
-    //    var quantitiy=0;
     $('.quantity-right-plus').click(function(e){
-        // Stop acting like a button
         e.preventDefault();
         // Get the field name
         var quantity = parseInt($('#quantity').val());
@@ -126,6 +125,7 @@
         var shortp= 12;
         var longp = 15;
         var hoodiep = 18;
+
         if($(".shirt_type").val() === "short"){
             price = shortp * q
         }
@@ -137,8 +137,8 @@
         }
         $('#addPrice').append("Price: " + price)
     });
+
     $('.quantity-left-minus').click(function(e){
-        // Stop acting like a button
         e.preventDefault();
         // Get the field name
         var quantity = parseInt($('#quantity').val());
@@ -163,54 +163,52 @@
             $('#addPrice').append("Price: " + price)
         }
     });
+
     var color;
     $('.colorBox').on('mouseover', function() {
         event.preventDefault();
         var setShirt = "data-short";
-        var defineShirt = $(".shirt_type").val()
+        var defineShirt = $(".shirt_type").val();
         color = $(this).attr("color");
         $('.place-image').empty();
+
         if (defineShirt ==="long"){
             setShirt = "data-long"
         }
         if(defineShirt ==="hoodie"){
             setShirt = "data-hoodie"
         }
-        console.log("shirt type= " + defineShirt)
+
         var imageLink  =$(this).attr(setShirt);
-        console.log(imageLink);
         var addImage = '<img class = "colorImage" src="' + imageLink + '">';
-        console.log(addImage);
         $('.place-image').append(addImage);
-    })
+    });
+
     $('.shirt_type').change(function() {
         $('#addPrice').empty()
-        var q = $("#quantity").val()
+        var q = $("#quantity").val();
         var shortp= 12;
         var longp = 15;
         var hoodiep = 18;
-        if($(this).val() === "short"){
+
+            if($(this).val() === "short"){
             price = shortp * q
-        }
-        if($(this).val() === "long"){
+            }
+            if($(this).val() === "long"){
             price = longp * q
-        }
-        if($(this).val() === "hoodie"){
+            }
+            if($(this).val() === "hoodie"){
             price = hoodiep * q
-        }
+            }
+
         $('#addPrice').append("Price: " + price)
     });
 
     $('#placeorder').click(function() {
-        console.log("size " + $(".size").val())
-        console.log("color " + color)
-        console.log("quantity " + $("#quantity").val())
-        console.log("shirt  " + $(".shirt_type").val())
-        console.log("notes " + $("#notes").val())
         var size = $(".size").val();
-        var quantity = $("#quantity").val()
-        var shirtType = $(".shirt_type").val()
-        var notes = $("#notes").val()
+        var quantity = $("#quantity").val();
+        var shirtType = $(".shirt_type").val();
+        var notes = $("#notes").val();
         var newUserOrder = {
             username: "{{user.username}}",
             size: size,
@@ -226,11 +224,11 @@
             type: "POST",
             data: newUserOrder
         }).then(function () {
-                    //this should log to browser console to let us know that the database has been updated
-                    console.log("created new order");
-                    // Reload the page to get the updated list
-                    location.reload();
-                }
+            //log to browser console to let us know that the database has been updated
+            console.log("created new order");
+            // Reload the page to get the updated list
+            location.reload();
+            }
         );
     })
 </script>

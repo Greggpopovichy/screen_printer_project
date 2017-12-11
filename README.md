@@ -7,7 +7,6 @@ Tech used in the project: \
 -Express.js \
 -MySQL \
 -bcrypt for password encryption \
--Polished design using the Materialize CSS framework \
 -handlebars.js for templating
 
 To run this app locally, please follow the below steps: 

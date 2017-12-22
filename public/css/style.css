@@ -149,7 +149,7 @@ nav{
 
 #loginCard{
     text-align: center;
-    margin-top:30px;
+    margin: 20px auto;
 }
 
 .valign-wrapper .form-group{
@@ -293,11 +293,24 @@ p.center-align{
 
 #profileContainer{
     background-color: rgba(255,255,255, 0.9);
-    width:75%;
+    margin: 20px auto;
 }
 
 #signupCard{
     margin: 20px auto;
 }
 
+#aboutCard{
+    margin-top:20px;
+}
 
+
+#orderCard{
+    text-shadow: 1px 1px 0px white;
+    width:auto;
+}
+
+#orderHistoryCard{
+    text-shadow: 1px 1px 0px white;
+    width:auto;
+}

@@ -1,6 +1,6 @@
 <nav class = "white">
     <div class ="nav-wrapper">
-        <a href="/about" class="brand-logo center black-text">Chuck's Tees</a>
+        <a href="/about" class="black-text col s12" id="navLogo">Chuck's Tees</a>
         <ul id="nav-mobile" class="center-align">
             <li><a href="/about" class="navAbout">Home</a></li>
             <li><a href="/login" class="navLogin">Login</a></li>
@@ -11,41 +11,42 @@
 
 <div class="login-image z-depth-5">
         <div class="row valign-wrapper">
-            <div class="card center-align col l8 offset-l2 z-depth-4" id="loginCard">
+            <div class="card center-align z-depth-4 col l6 m8 s12" id="signupCard">
                 <h4 class="center-align black-text">Sign Up</h4>
-        <form action="/signup" method="post">
-            <div class="form-group" id="firstName">
-                <label for="fName-input">First Name </label>
-                <input class="form-control" id="fName-input" name="user_first_name" class = "validate" type="text" required>
-            </div>
+                    <form action="/signup" method="post">
+                        <div class="form-group" id="firstName">
+                            <label for="fName-input">First Name </label>
+                            <input class="form-control" id="fName-input" name="user_first_name" class = "validate" type="text" required>
+                        </div>
 
-            <div class="form-group" id="lastName">
-                <label>Last Name </label>
-                <input class="form-control" id="lName-input" name="user_last_name" class = "validate" type="text" required>
-            </div>
+                        <div class="form-group" id="lastName">
+                            <label>Last Name </label>
+                            <input class="form-control" id="lName-input" name="user_last_name" class = "validate" type="text" required>
+                        </div>
 
-            <div class="form-group" id="number">
-                <label>Number </label>
-                <input class="form-control" id="number-input" class = "validate" name="user_number" type="number">
-            </div>
+                        <div class="form-group" id="number">
+                            <label>Number </label>
+                            <input class="form-control" id="number-input" class = "validate" name="user_number" type="number">
+                        </div>
 
-            <div class="form-group" id="email">
-                <label>Email </label>
-                <input class="form-control" id="email-input" class = "validate" name="user_email" type="email" required>
-            </div>
+                        <div class="form-group" id="email">
+                            <label>Email </label>
+                            <input class="form-control" id="email-input" class = "validate" name="user_email" type="email" required>
+                        </div>
 
-            <div class="form-group" id="username">
-                <label>Username</label>
-                <input type="text" class="form-control" id="usernameinput" name="username" required>
-                {{#if message}}
-                    <div class="alert alert-danger">{{message}}</div>
-                {{/if}}
-            </div>
-            <div class="form-group" id="password">
-                <label>Password</label>
-                <input type="password" class="form-control" id="passwordinput" name="password" required>
+                        <div class="form-group" id="username">
+                            <label>Username</label>
+                            <input type="text" class="form-control" id="usernameinput" name="username" required>
+                                {{#if message}}
+                        <div class="alert alert-danger">{{message}}</div>
+                                {{/if}}
+                        </div>
+
+                        <div class="form-group" id="password">
+                            <label>Password</label>
+                            <input type="password" class="form-control" id="passwordinput" name="password" required>
                 <!--</form>-->
-            </div>
+                        </div>
 
             <button type="submit" class="btn waves-effect waves-light red" id="signupSubmit">Signup</button>
 

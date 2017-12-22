@@ -20,11 +20,12 @@ body {
     margin-bottom:10px;
 }
 
-a.brand-logo{
+a#navLogo{
     font-size: 62px;
     color: #0d47a1;
     text-align: center;
-    padding-top: 20px;
+    display:block;
+    padding-top:15px;
 }
 
 .fixed-action-btn.horizontal ul{
@@ -55,13 +56,8 @@ ul.left li a{
 }
 
 
-ul#nav-mobile{
-    padding-top:30px;
-}
-
 nav ul li {
     display:inline-block;
-    margin-top:60px;
     float:none;
     color:black;
 }
@@ -152,8 +148,8 @@ nav{
 }
 
 #loginCard{
-    padding-top:25px;
     text-align: center;
+    margin-top:30px;
 }
 
 .valign-wrapper .form-group{
@@ -231,12 +227,6 @@ p.center-align{
 }
 
 
-#loginCard{
-    margin-top:30px;
-}
-
-
-
 #loginButtonRow{
     margin-bottom:0px;
 }
@@ -245,13 +235,6 @@ p.center-align{
     background-color:red;
     color: white;
     margin-bottom:15px;
-}
-
-.btn-number {
-
-}
-
-#placeOrderForm {
 }
 
 #fName-input{
@@ -312,3 +295,9 @@ p.center-align{
     background-color: rgba(255,255,255, 0.9);
     width:75%;
 }
+
+#signupCard{
+    margin: 20px auto;
+}
+
+
